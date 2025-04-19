@@ -133,3 +133,13 @@ footer a:hover {
     border: 1px solid #ccc;
     border-radius: 4px;
   }
+
+  .pagination {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .pagination button {
+    padding: 0.4rem 1rem;
+  }

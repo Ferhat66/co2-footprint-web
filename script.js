@@ -1,3 +1,7 @@
+let anzahlProSeite = 10;
+let aktuelleSeite = 1;
+let gespeichertesXML = null;
+
 async function ladeXMLDaten() {
     try {
       const response = await fetch("daten.xml");
@@ -10,33 +14,38 @@ async function ladeXMLDaten() {
       return null;
     }
 }
-    window.onload = async () => {
-        const xml = await ladeXMLDaten();
-        console.log(xml); // Das siehst du in der Browser-Konsole
-      };
-      function zeigeTabelle(xml) {
-        const eintraege = xml.getElementsByTagName("eintrag");
-        const tbody = document.querySelector("tbody");
-        tbody.innerHTML = "";
-      
-        Array.from(eintraege).forEach(eintrag => {
-          const name = eintrag.getElementsByTagName("name")[0].textContent;
-          const land = eintrag.getElementsByTagName("land")[0].textContent;
-          const branche = eintrag.getElementsByTagName("branche")[0].textContent;
-          const emissionen = eintrag.getElementsByTagName("emissionen")[0].textContent;
-          const klasse = eintrag.getElementsByTagName("klasse")[0].textContent;
-      
-          const row = document.createElement("tr");
-          row.innerHTML = `
-            <td>${name}</td>
-            <td>${land}</td>
-            <td>${branche}</td>
-            <td>${emissionen}</td>
-            <td>${klasse}</td>
-          `;
-          tbody.appendChild(row);
-        });
-      }
+function zeigeTabelle(xml) {
+  const eintraege = Array.from(xml.getElementsByTagName("eintrag"));
+  const tbody = document.querySelector("tbody");
+  tbody.innerHTML = "";
+
+  const start = (aktuelleSeite - 1) * anzahlProSeite;
+  const end = start + anzahlProSeite;
+  const aktuelleEintraege = eintraege.slice(start, end);
+
+  aktuelleEintraege.forEach(eintrag => {
+    const name = eintrag.getElementsByTagName("name")[0].textContent;
+    const land = eintrag.getElementsByTagName("land")[0].textContent;
+    const branche = eintrag.getElementsByTagName("branche")[0].textContent;
+    const emissionen = eintrag.getElementsByTagName("emissionen")[0].textContent;
+    const klasse = eintrag.getElementsByTagName("klasse")[0].textContent;
+
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${name}</td>
+      <td>${land}</td>
+      <td>${branche}</td>
+      <td>${emissionen}</td>
+      <td>${klasse}</td>
+    `;
+    tbody.appendChild(row);
+  });
+
+  const gesamtSeiten = Math.ceil(eintraege.length / anzahlProSeite);
+  document.getElementById("pageInfo").textContent = `Seite ${aktuelleSeite} von ${gesamtSeiten}`;
+  document.getElementById("prevPage").disabled = aktuelleSeite === 1;
+  document.getElementById("nextPage").disabled = aktuelleSeite === gesamtSeiten;
+}
       function fuelleDropdown(xml, tagName, selectId) {
         const eintraege = xml.getElementsByTagName("eintrag");
         const werteSet = new Set();
@@ -60,39 +69,85 @@ async function ladeXMLDaten() {
         const countryFilter = document.getElementById("country").value;
         const industryFilter = document.getElementById("industry").value;
         const searchInput = document.getElementById("search").value.toUpperCase();
+        const sortOption = document.getElementById("sort").value;
       
-        const eintraege = xml.getElementsByTagName("eintrag");
+        const eintraege = Array.from(xml.getElementsByTagName("eintrag"));
+      
+        // 1. Filtern
+        let gefiltert = eintraege.filter(eintrag => {
+          const name = eintrag.getElementsByTagName("name")[0].textContent;
+          const land = eintrag.getElementsByTagName("land")[0].textContent;
+          const branche = eintrag.getElementsByTagName("branche")[0].textContent;
+          const klasse = eintrag.getElementsByTagName("klasse")[0].textContent;
+      
+          return (
+            (companyFilter === "" || name.toLowerCase().includes(companyFilter)) &&
+            (countryFilter === "" || land === countryFilter) &&
+            (industryFilter === "" || branche === industryFilter) &&
+            (searchInput === "" || klasse.toUpperCase().includes(searchInput))
+          );
+        });
+      
+        // 2. Sortieren
+        if (sortOption === "emission-asc" || sortOption === "emission-desc") {
+          gefiltert.sort((a, b) => {
+            const emA = parseInt(a.getElementsByTagName("emissionen")[0].textContent);
+            const emB = parseInt(b.getElementsByTagName("emissionen")[0].textContent);
+            return sortOption === "emission-asc" ? emA - emB : emB - emA;
+          });
+        }
+      
+        if (sortOption === "name") {
+          gefiltert.sort((a, b) => {
+            const nameA = a.getElementsByTagName("name")[0].textContent.toLowerCase();
+            const nameB = b.getElementsByTagName("name")[0].textContent.toLowerCase();
+            return nameA.localeCompare(nameB);
+          });
+        }
+      
+        // 3. Tabelle anzeigen
+        aktuelleSeite = 1;
+        zeigeGefilterteTabelle(gefiltert);
+      }
+      function zeigeGefilterteTabelle(gefiltert) {
         const tbody = document.querySelector("tbody");
         tbody.innerHTML = "";
       
-        Array.from(eintraege).forEach(eintrag => {
+        const start = (aktuelleSeite - 1) * anzahlProSeite;
+        const end = start + anzahlProSeite;
+        const aktuelleEintraege = gefiltert.slice(start, end);
+      
+        aktuelleEintraege.forEach(eintrag => {
           const name = eintrag.getElementsByTagName("name")[0].textContent;
           const land = eintrag.getElementsByTagName("land")[0].textContent;
           const branche = eintrag.getElementsByTagName("branche")[0].textContent;
           const emissionen = eintrag.getElementsByTagName("emissionen")[0].textContent;
           const klasse = eintrag.getElementsByTagName("klasse")[0].textContent;
       
-          if (
-            (companyFilter === "" || name.toLowerCase().includes(companyFilter)) &&
-            (countryFilter === "" || land === countryFilter) &&
-            (industryFilter === "" || branche === industryFilter) &&
-            (searchInput === "" || klasse.toUpperCase().includes(searchInput))
-          ) {
-            const row = document.createElement("tr");
-            row.innerHTML = `
-              <td>${name}</td>
-              <td>${land}</td>
-              <td>${branche}</td>
-              <td>${emissionen}</td>
-              <td>${klasse}</td>
-            `;
-            tbody.appendChild(row);
-          }
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${name}</td>
+            <td>${land}</td>
+            <td>${branche}</td>
+            <td>${emissionen}</td>
+            <td>${klasse}</td>
+          `;
+          tbody.appendChild(row);
         });
+      
+        const gesamtSeiten = Math.ceil(gefiltert.length / anzahlProSeite);
+        document.getElementById("pageInfo").textContent = `Seite ${aktuelleSeite} von ${gesamtSeiten}`;
+        document.getElementById("prevPage").disabled = aktuelleSeite === 1;
+        document.getElementById("nextPage").disabled = aktuelleSeite === gesamtSeiten;
+      
+        // Speicher die aktuellen Filterdaten für Pagination-Buttons
+        window._aktuelleGefilterteDaten = gefiltert;
       }
       async function initialisiere() {
         const xml = await ladeXMLDaten();
         if (!xml) return;
+      
+        gespeichertesXML = xml;
       
         zeigeTabelle(xml);
         fuelleDropdown(xml, "name", "company");
@@ -103,6 +158,28 @@ async function ladeXMLDaten() {
         document.getElementById("country").addEventListener("change", () => filtereTabelle(xml));
         document.getElementById("industry").addEventListener("change", () => filtereTabelle(xml));
         document.getElementById("search").addEventListener("input", () => filtereTabelle(xml));
+      
+        // ➕ Neue Zeilen für Einträge-Dropdown
+        document.getElementById("prevPage").addEventListener("click", () => {
+          if (aktuelleSeite > 1) {
+            aktuelleSeite--;
+            zeigeGefilterteTabelle(window._aktuelleGefilterteDaten);
+          }
+        });
+        document.getElementById("sort").addEventListener("change", () => filtereTabelle(xml));
+        document.getElementById("nextPage").addEventListener("click", () => {
+          const eintraege = window._aktuelleGefilterteDaten;
+          const gesamtSeiten = Math.ceil(eintraege.length / anzahlProSeite);
+          if (aktuelleSeite < gesamtSeiten) {
+            aktuelleSeite++;
+            zeigeGefilterteTabelle(eintraege);
+          }
+        });
+        document.getElementById("entriesPerPage").addEventListener("change", (e) => {
+          anzahlProSeite = parseInt(e.target.value);
+          aktuelleSeite = 1;
+          filtereTabelle(xml);
+        });
       }
       
       window.onload = initialisiere;

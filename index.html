@@ -34,109 +34,71 @@
 
     <!-- Filter -->
     <section class="filter-grid">
-        <div>
-          <label for="company">Unternehmen auswählen:</label>
-          <select id="company">
-            <option value="">Alle</option>
-            <option value="GreenTech">GreenTech Solutions</option>
-            <option value="EcoDrive">EcoDrive Motors</option>
-            <option value="FutureFood">FutureFood AG</option>
-            <option value="UrbanPower">UrbanPower GmbH</option>
-            <option value="NovaChem">NovaChem Industries</option>
-          </select>
-        </div>
-      
-        <div>
-          <label for="country">Land auswählen:</label>
-          <select id="country">
-            <option value="">Alle</option>
-            <option value="de">Deutschland</option>
-            <option value="us">USA</option>
-            <option value="ch">Schweiz</option>
-            <option value="at">Österreich</option>
-            <option value="fr">Frankreich</option>
-          </select>
-        </div>
-      
-        <div>
-          <label for="industry">Branche auswählen:</label>
-          <select id="industry">
-            <option value="">Alle</option>
-            <option value="energie">Energie</option>
-            <option value="auto">Automobil</option>
-            <option value="lebensmittel">Lebensmittel</option>
-            <option value="infrastruktur">Infrastruktur</option>
-            <option value="chemie">Chemie</option>
-          </select>
-        </div>
-      
-        <div>
-          <label for="sort">Sortieren nach:</label>
-          <select id="sort">
-            <option value="emission-asc">Emissionen (aufsteigend)</option>
-            <option value="emission-desc">Emissionen (absteigend)</option>
-            <option value="name">Unternehmensname</option>
-          </select>
-        </div>
-      
-        <div>
-          <label for="search">Suche nach Emissionsklasse:</label>
-          <input type="text" id="search" placeholder="z. B. A, B, C…" />
-        </div>
-      </section>
-
-    <!-- TABELLE -->
-    <section class="table-section">
-      <table>
-        <thead>
-          <tr>
-            <th>Unternehmen</th>
-            <th>Land</th>
-            <th>Branche</th>
-            <th>Emissionen (t)</th>
-            <th>Emissionsklasse</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>GreenTech Solutions</td>
-            <td>Deutschland</td>
-            <td>Energie</td>
-            <td>28.500</td>
-            <td>B</td>
-          </tr>
-          <tr>
-            <td>EcoDrive Motors</td>
-            <td>USA</td>
-            <td>Automobil</td>
-            <td>54.200</td>
-            <td>C</td>
-          </tr>
-          <tr>
-            <td>FutureFood AG</td>
-            <td>Schweiz</td>
-            <td>Lebensmittel</td>
-            <td>12.750</td>
-            <td>A</td>
-          </tr>
-          <tr>
-            <td>UrbanPower GmbH</td>
-            <td>Österreich</td>
-            <td>Infrastruktur</td>
-            <td>38.900</td>
-            <td>B</td>
-          </tr>
-          <tr>
-            <td>NovaChem Industries</td>
-            <td>Frankreich</td>
-            <td>Chemie</td>
-            <td>76.300</td>
-            <td>D</td>
-          </tr>
-        </tbody>
-      </table>
+      <div>
+        <label for="company">Unternehmen auswählen:</label>
+        <select id="company">
+          <option value="">Alle</option>
+        </select>
+      </div>
+      <div>
+        <label for="country">Land auswählen:</label>
+        <select id="country">
+          <option value="">Alle</option>
+        </select>
+      </div>
+      <div>
+        <label for="industry">Branche auswählen:</label>
+        <select id="industry">
+          <option value="">Alle</option>
+        </select>
+      </div>
+      <div>
+        <label for="sort">Sortieren nach:</label>
+        <select id="sort">
+          <option value="emission-asc">Emissionen (aufsteigend)</option>
+          <option value="emission-desc">Emissionen (absteigend)</option>
+          <option value="name">Unternehmensname</option>
+        </select>
+      </div>
+      <div>
+        <label for="search">Suche nach Emissionsklasse:</label>
+        <input type="text" id="search" placeholder="z. B. A, B, C…" />
+      </div>
     </section>
-  </main>
+
+    <!-- TABELLE (wird dynamisch per JS befüllt) -->
+<section class="table-section">
+  <table>
+    <thead>
+      <tr>
+        <th>Unternehmen</th>
+        <th>Land</th>
+        <th>Branche</th>
+        <th>Emissionen (t)</th>
+        <th>Emissionsklasse</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Inhalte werden per JavaScript aus daten.xml befüllt -->
+    </tbody>
+  </table>
+
+  <!-- Auswahl wie viele Einträge -->
+  <div class="table-controls">
+    <label for="entriesPerPage">Zeige:</label>
+    <select id="entriesPerPage">
+      <option value="10">10</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+    </select>
+    <span>Einträge</span>
+  </div>
+  <div class="pagination">
+    <button id="prevPage">Zurück</button>
+    <span id="pageInfo">Seite 1</span>
+    <button id="nextPage">Weiter</button>
+  </div>
+</section>
 
   <!-- FOOTER -->
   <footer>
