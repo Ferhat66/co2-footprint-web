@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CO₂-Footprint</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+ <!-- Header -->
+<header>
+    <div class="container header">
+      <div class="header-left">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <h1>CO₂-Footprint</h1>
+      </div>
+      <div class="header-right">
+        <nav>
+          <a href="#">Startseite</a>
+          <a href="#">Über uns</a>
+          <a href="#">Kontakt</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Container -->
+  <main class="container">
+    <section class="intro">
+      <h2>Emissionen im Überblick</h2>
+      <p>Diese Tabelle zeigt die jährlichen CO₂-Emissionen für verschiedene Unternehmen. Verwenden Sie die Filter, um die Daten einzugrenzen.</p>
+    </section>
+
+    <!-- Filter -->
+    <section class="filter-grid">
+        <div>
+          <label for="company">Unternehmen auswählen:</label>
+          <select id="company">
+            <option value="">Alle</option>
+            <option value="GreenTech">GreenTech Solutions</option>
+            <option value="EcoDrive">EcoDrive Motors</option>
+            <option value="FutureFood">FutureFood AG</option>
+            <option value="UrbanPower">UrbanPower GmbH</option>
+            <option value="NovaChem">NovaChem Industries</option>
+          </select>
+        </div>
+      
+        <div>
+          <label for="country">Land auswählen:</label>
+          <select id="country">
+            <option value="">Alle</option>
+            <option value="de">Deutschland</option>
+            <option value="us">USA</option>
+            <option value="ch">Schweiz</option>
+            <option value="at">Österreich</option>
+            <option value="fr">Frankreich</option>
+          </select>
+        </div>
+      
+        <div>
+          <label for="industry">Branche auswählen:</label>
+          <select id="industry">
+            <option value="">Alle</option>
+            <option value="energie">Energie</option>
+            <option value="auto">Automobil</option>
+            <option value="lebensmittel">Lebensmittel</option>
+            <option value="infrastruktur">Infrastruktur</option>
+            <option value="chemie">Chemie</option>
+          </select>
+        </div>
+      
+        <div>
+          <label for="sort">Sortieren nach:</label>
+          <select id="sort">
+            <option value="emission-asc">Emissionen (aufsteigend)</option>
+            <option value="emission-desc">Emissionen (absteigend)</option>
+            <option value="name">Unternehmensname</option>
+          </select>
+        </div>
+      
+        <div>
+          <label for="search">Suche nach Emissionsklasse:</label>
+          <input type="text" id="search" placeholder="z. B. A, B, C…" />
+        </div>
+      </section>
+
+    <!-- TABELLE -->
+    <section class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>Unternehmen</th>
+            <th>Land</th>
+            <th>Branche</th>
+            <th>Emissionen (t)</th>
+            <th>Emissionsklasse</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GreenTech Solutions</td>
+            <td>Deutschland</td>
+            <td>Energie</td>
+            <td>28.500</td>
+            <td>B</td>
+          </tr>
+          <tr>
+            <td>EcoDrive Motors</td>
+            <td>USA</td>
+            <td>Automobil</td>
+            <td>54.200</td>
+            <td>C</td>
+          </tr>
+          <tr>
+            <td>FutureFood AG</td>
+            <td>Schweiz</td>
+            <td>Lebensmittel</td>
+            <td>12.750</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>UrbanPower GmbH</td>
+            <td>Österreich</td>
+            <td>Infrastruktur</td>
+            <td>38.900</td>
+            <td>B</td>
+          </tr>
+          <tr>
+            <td>NovaChem Industries</td>
+            <td>Frankreich</td>
+            <td>Chemie</td>
+            <td>76.300</td>
+            <td>D</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer">
+      <nav class="footer-nav">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">Kontakt</a>
+      </nav>
+      <p>Daten sind fiktiv – nur zu Demonstrationszwecken</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
