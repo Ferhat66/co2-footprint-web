@@ -33,3 +33,6 @@ Ziel ist die Entwicklung einer responsiven Webseite, welche CO₂-Emissionsdaten
 
 Dieses Projekt dient ausschließlich zu **Demonstrations- und Lernzwecken**.  
 Alle Daten sind fiktiv und nicht repräsentativ.
+
+Ein Großteil der Grundstruktur (HTML-Layout, erstes CSS-Styling und grundlegende JavaScript-Funktionen) wurde bereits vorab lokal entwickelt.
+Die weiteren Funktionen wie das dynamische Einbinden von XML-Daten, die erweiterte Filterlogik, die Sortierung sowie die Pagination wurden darauf aufbauend Schritt für Schritt in diesem Repository ergänzt und dokumentiert.
