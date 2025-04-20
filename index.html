@@ -8,8 +8,8 @@
 </head>
 <body>
 
- <!-- Header -->
-<header>
+  <!-- Header -->
+  <header>
     <div class="container header">
       <div class="header-left">
         <img src="logo.png" alt="Logo" class="logo" />
@@ -66,39 +66,46 @@
       </div>
     </section>
 
-    <!-- TABELLE (wird dynamisch per JS befüllt) -->
-<section class="table-section">
-  <table>
-    <thead>
-      <tr>
-        <th>Unternehmen</th>
-        <th>Land</th>
-        <th>Branche</th>
-        <th>Emissionen (t)</th>
-        <th>Emissionsklasse</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Inhalte werden per JavaScript aus daten.xml befüllt -->
-    </tbody>
-  </table>
+    <!-- TABELLE -->
+    <section class="table-section">
 
-  <!-- Auswahl wie viele Einträge -->
-  <div class="table-controls">
-    <label for="entriesPerPage">Zeige:</label>
-    <select id="entriesPerPage">
-      <option value="10">10</option>
-      <option value="25">25</option>
-      <option value="50">50</option>
-    </select>
-    <span>Einträge</span>
-  </div>
-  <div class="pagination">
-    <button id="prevPage">Zurück</button>
-    <span id="pageInfo">Seite 1</span>
-    <button id="nextPage">Weiter</button>
-  </div>
-</section>
+      <!-- Scrollbare Tabelle -->
+      <div class="tabelle-scroll-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Unternehmen</th>
+              <th>Land</th>
+              <th>Branche</th>
+              <th>Emissionen (t)</th>
+              <th>Emissionsklasse</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Inhalte werden per JavaScript aus daten.xml befüllt -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination & Einträge-Anzeige -->
+      <div class="table-controls">
+        <label for="entriesPerPage">Zeige:</label>
+        <select id="entriesPerPage">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+        </select>
+        <span>Einträge</span>
+      </div>
+
+      <div class="pagination">
+        <button id="prevPage">Zurück</button>
+        <span id="pageInfo">Seite 1</span>
+        <button id="nextPage">Weiter</button>
+      </div>
+
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer>
@@ -111,6 +118,7 @@
       <p>Daten sind fiktiv – nur zu Demonstrationszwecken</p>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

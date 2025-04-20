@@ -21,35 +21,35 @@ header h1 {
 
 /* Header-Styling */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 1rem 2rem;
-  }
-  
-  .header-left {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .logo {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .header-right nav a {
-    margin-left: 1rem;
-    text-decoration: none;
-    color: #0077cc;
-    font-weight: bold;
-    font-size: 0.83rem;
-  }
-  
-  .header-right nav a:hover {
-    text-decoration: underline;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.header-right nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+  font-size: 0.83rem;
+}
+
+.header-right nav a:hover {
+  text-decoration: underline;
+}
 
 /* Hauptbereich */
 main {
@@ -62,7 +62,8 @@ main {
 }
 
 /* Filter */
-section select, section input {
+section select,
+section input {
   margin: 0.5rem 0.75rem 1rem 0;
   padding: 0.4rem;
   border: 1px solid #ccc;
@@ -110,36 +111,169 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* Filter-Layout */
 .filter-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
-    margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.filter-grid div {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-grid label {
+  font-size: 0.85rem;
+}
+
+.filter-grid select,
+.filter-grid input {
+  font-size: 0.85rem;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pagination button {
+  padding: 0.4rem 1rem;
+}
+
+/*Media Query für Mobile (IPhone 16 Pro Max)*/
+@media (max-width: 450px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  header {
+    text-align: center;
+    padding: 1rem;
   }
   
-  .filter-grid div {
+  .header-left {
     display: flex;
     flex-direction: column;
-  }
-
-  .filter-grid label {
-    font-size: 0.85rem;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
   }
   
-  .filter-grid select,
-  .filter-grid input {
-    font-size: 0.85rem;
-    padding: 0.4rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  .logo {
+    width: 36px;
+    height: auto;
+  }
+  
+  h1 {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+  
+  .header-right {
+    width: 100%;
+  }
+  
+  .header-right nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
   }
 
-  .pagination {
-    margin-top: 1rem;
+  .intro {
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  .filter-grid {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
   }
+
+  .filter-grid > div {
+    margin-bottom: 0.3rem;
+  }
+
+  label {
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+  }
+
+  select,
+  input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  .table-section {
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .tabelle-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+
+  .tabelle-scroll-wrapper table {
+    min-width: 600px;
+    width: max-content;
+    border-collapse: collapse;
+    background-color: white;
+  }
+
+  .tabelle-scroll-wrapper th,
+  .tabelle-scroll-wrapper td {
+    white-space: nowrap;
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+  }
+
+  .table-controls,
+  .pagination {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
   .pagination button {
+    margin: 0 0.3rem;
     padding: 0.4rem 1rem;
+    font-size: 0.9rem;
   }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+
+  .footer-nav a {
+    margin: 0 0.3rem;
+  }
+}
