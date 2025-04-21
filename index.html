@@ -9,21 +9,36 @@
 <body>
 
   <!-- Header -->
-  <header>
-    <div class="container header">
-      <div class="header-left">
-        <img src="logo.png" alt="Logo" class="logo" />
-        <h1>CO₂-Footprint</h1>
-      </div>
-      <div class="header-right">
-        <nav>
-          <a href="#">Startseite</a>
-          <a href="#">Über uns</a>
-          <a href="#">Kontakt</a>
-        </nav>
-      </div>
+<header>
+  <div class="container header">
+    <div class="header-left">
+      <img src="logo.png" alt="Logo" class="logo" />
+      <h1>CO₂-Footprint</h1>
     </div>
-  </header>
+
+    <div class="header-right">
+      <!-- Desktop-Navi -->
+      <nav class="main-nav">
+        <a href="#">Startseite</a>
+        <a href="#">Über uns</a>
+        <a href="#">Kontakt</a>
+      </nav>
+
+      <!-- Burger-Menü (rechtsbündig) -->
+<button class="burger" aria-label="Menü öffnen">☰</button>
+
+<!-- Offcanvas-Menü -->
+<div class="offcanvas-nav" id="mobileMenu">
+  <button class="close-btn" aria-label="Menü schließen">✕</button>
+  <nav>
+    <a href="#">Startseite</a>
+    <a href="#">Über uns</a>
+    <a href="#">Kontakt</a>
+  </nav>
+</div>
+    </div>
+  </div>
+</header>
 
   <!-- Container -->
   <main class="container">

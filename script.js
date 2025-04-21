@@ -183,3 +183,20 @@ function zeigeTabelle(xml) {
       }
       
       window.onload = initialisiere;
+
+     // Burger-Menü für Offcanvas-Navigation
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.querySelector(".burger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeBtn = mobileMenu.querySelector(".close-btn");
+
+  burger.addEventListener("click", () => {
+    mobileMenu.classList.add("active");
+    document.body.classList.add("offcanvas-open");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+    document.body.classList.remove("offcanvas-open");
+  });
+});
