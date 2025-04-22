@@ -183,20 +183,57 @@ function zeigeTabelle(xml) {
       }
       
       window.onload = initialisiere;
-
-     // Burger-Menü für Offcanvas-Navigation
-document.addEventListener("DOMContentLoaded", () => {
-  const burger = document.querySelector(".burger");
-  const mobileMenu = document.getElementById("mobileMenu");
-  const closeBtn = mobileMenu.querySelector(".close-btn");
-
-  burger.addEventListener("click", () => {
-    mobileMenu.classList.add("active");
-    document.body.classList.add("offcanvas-open");
-  });
-
-  closeBtn.addEventListener("click", () => {
-    mobileMenu.classList.remove("active");
-    document.body.classList.remove("offcanvas-open");
-  });
-});
+      function resetFilters() {
+        document.getElementById("company").value = "";
+        document.getElementById("country").value = "";
+        document.getElementById("industry").value = "";
+        document.getElementById("search").value = "";
+        document.getElementById("sort").value = "emission-asc";
+        document.getElementById("entriesPerPage").value = "10";
+        anzahlProSeite = 10;
+        aktuelleSeite = 1;
+      
+        if (gespeichertesXML) {
+          filtereTabelle(gespeichertesXML);
+        }
+      }
+      
+      document.addEventListener("DOMContentLoaded", () => {
+        const burger = document.querySelector(".burger");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const closeBtn = mobileMenu.querySelector(".close-btn");
+      
+        // Burger-Öffnen
+        burger.addEventListener("click", () => {
+          mobileMenu.classList.add("active");
+          document.body.classList.add("offcanvas-open");
+        });
+      
+        // Burger-Schließen
+        closeBtn.addEventListener("click", () => {
+          mobileMenu.classList.remove("active");
+          document.body.classList.remove("offcanvas-open");
+        });
+      
+        // Alle "Startseite"-Elemente & Logo verlinken
+        const resetTrigger = [
+          document.getElementById("startseite-link"),
+          document.getElementById("startseite-link-mobile"),
+          document.getElementById("logo-title")
+        ];
+      
+        resetTrigger.forEach((el) => {
+          if (el) {
+            el.addEventListener("click", (e) => {
+              e.preventDefault();
+              resetFilters();
+      
+              // Offcanvas-Menü ggf. schließen
+              if (mobileMenu.classList.contains("active")) {
+                mobileMenu.classList.remove("active");
+                document.body.classList.remove("offcanvas-open");
+              }
+            });
+          }
+        });
+      });

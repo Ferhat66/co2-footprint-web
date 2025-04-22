@@ -1,11 +1,18 @@
 /* Grundlayout */
-body {
-  font-family: Arial, sans-serif;
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #f4f7f9;
   color: #333;
+
+  display: flex;
+  flex-direction: column;
 }
 
 header, footer {
@@ -35,8 +42,12 @@ header h1 {
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 120px;
+  height: 120px;
+}
+.logo-titel {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .header-right nav a {
@@ -59,6 +70,7 @@ main {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  flex: 1;
 }
 
 /* Filter */
@@ -203,8 +215,8 @@ footer a:hover {
 /* Zeige Burger-Button */
 .burger {
   position: absolute;
-  top: 1.2rem;
-  right: 1.5rem;
+  top: 1rem;
+  right: 1.2rem;
   background: none;
   border: none;
   font-size: 2rem;
@@ -217,8 +229,12 @@ footer a:hover {
   display: none !important;
 }
   /* Header-Layout für Mobile */
-  header {
+  .container.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    gap: 0.3rem;
     padding: 1rem;
   }
 
@@ -235,13 +251,37 @@ footer a:hover {
   }
 
   .logo {
-    width: 36px;
+    width: 80px;
     height: auto;
   }
 
   h1 {
     font-size: 1.3rem;
     margin: 0;
+  }
+  
+  .filter-grid > div {
+    margin-bottom: 0.2rem;
+  }
+  
+  .filter-grid label {
+    font-size: 0.85rem;
+    margin-bottom: 0.1rem;
+  }
+  
+  .filter-grid select,
+  .filter-grid input {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+  .filter-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
   }
 }
 /* === Desktop: Burger & Offcanvas-Navi ausblenden === */
@@ -263,5 +303,40 @@ footer a:hover {
 
   .offcanvas-nav:not(.active) nav {
     display: none;
+  }
+}
+.tabelle-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+@media (max-width: 450px) {
+  .tabelle-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+
+  .tabelle-scroll-wrapper table {
+    min-width: 600px;
+    width: max-content;
+    border-collapse: collapse;
+  }
+}
+.scroll-fix {
+  width: 100%;
+  overflow-x: visible;
+}
+@media (max-width: 450px) {
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+  }
+
+  .filter-grid {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
