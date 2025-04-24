@@ -340,3 +340,85 @@ footer a:hover {
     padding-right: 1rem;
   }
 }
+/* Textnachricht bei "Über uns" Seite */
+.about-contact {
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
+  max-width: 1000px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.about-contact h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #222;
+  font-weight: bold;
+}
+
+.about-contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.about-contact label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #222;
+  display: block;
+}
+
+.about-contact textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+  min-height: 160px;
+  resize: vertical;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.about-contact button {
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1.6rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  align-self: flex-start;
+}
+
+.about-contact button:hover {
+  background-color: #005fa3;
+}
+
+/* Mobile Textnachricht bei "Über uns" Seite */
+@media (max-width: 450px) {
+  .about-contact {
+    padding: 2rem 1rem;
+    margin: 2rem auto;
+    max-width: 95%;
+    box-sizing: border-box;
+  }
+
+  .about-contact textarea {
+    min-height: 140px;
+    width: 100%;
+  }
+
+  .about-contact button {
+    width: 100%;
+    text-align: center;
+  }
+}
