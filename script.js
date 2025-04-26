@@ -199,23 +199,24 @@ function zeigeTabelle(xml) {
       }
       
       document.addEventListener("DOMContentLoaded", () => {
+        initialisiere();
         const burger = document.querySelector(".burger");
         const mobileMenu = document.getElementById("mobileMenu");
         const closeBtn = mobileMenu.querySelector(".close-btn");
       
-        // Burger-Öffnen
+        // Burger-Menü öffnen
         burger.addEventListener("click", () => {
           mobileMenu.classList.add("active");
           document.body.classList.add("offcanvas-open");
         });
       
-        // Burger-Schließen
+        // Burger-Menü schließen
         closeBtn.addEventListener("click", () => {
           mobileMenu.classList.remove("active");
           document.body.classList.remove("offcanvas-open");
         });
       
-        // Alle "Startseite"-Elemente & Logo verlinken
+        // "Startseite"-Reset
         const resetTrigger = [
           document.getElementById("startseite-link"),
           document.getElementById("startseite-link-mobile"),
@@ -228,7 +229,6 @@ function zeigeTabelle(xml) {
               e.preventDefault();
               resetFilters();
       
-              // Offcanvas-Menü ggf. schließen
               if (mobileMenu.classList.contains("active")) {
                 mobileMenu.classList.remove("active");
                 document.body.classList.remove("offcanvas-open");
@@ -236,4 +236,24 @@ function zeigeTabelle(xml) {
             });
           }
         });
+      
+        // Pop-up nach dem Absenden des Kontaktformulars
+        const kontaktFormular = document.getElementById("kontaktformular");
+        const popup = document.getElementById("success-popup");
+      
+        if (kontaktFormular && popup) {
+          kontaktFormular.addEventListener("submit", (e) => {
+            e.preventDefault();
+            popup.classList.remove("popup-hidden");
+      
+            // 👉 Close-Button wird erst **jetzt** geholt, wenn er sichtbar ist
+            const popupClose = document.getElementById("popup-close");
+            if (popupClose) {
+              popupClose.onclick = () => {
+                popup.classList.add("popup-hidden");
+                kontaktFormular.reset();
+              };
+            }
+          });
+        }
       });

@@ -58,13 +58,20 @@
 
   <section class="about-contact">
     <h2>Fragen oder Feedback?</h2>
-    <form action="#" method="post">
+    <form id="kontaktformular" class="popup-wrapper">
       <label for="nachricht">Deine Nachricht:</label>
-      <textarea id="nachricht" name="nachricht" rows="6" placeholder="Schreibe uns hier eine Nachricht..."></textarea>
+      <textarea id="nachricht" name="nachricht" rows="6" placeholder="Schreibe uns hier eine Nachricht mit deinen Kontaktdaten..."></textarea>
       <button type="submit">Nachricht absenden</button>
+  
+      <!-- Pop-Up Fenster direkt im Formular -->
+      <div id="success-popup" class="popup-hidden popup" role="alert" aria-live="polite">
+        <div class="popup-content">
+          <p>Danke für deine Nachricht! Wir melden uns so schnell wie möglich.</p>
+          <button type="button" id="popup-close" aria-label="Fenster schließen">Schließen</button>
+        </div>
+      </div>
     </form>
   </section>
-</main>
 
 <!-- Footer -->
 <footer>
@@ -77,7 +84,6 @@
     <p>Daten sind fiktiv – nur zu Demonstrationszwecken</p>
   </div>
 </footer>
-
 <script src="script.js"></script>
 </body>
 </html>
