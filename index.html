@@ -21,8 +21,14 @@
       <nav class="main-nav">
         <a href="#" id="startseite-link">Startseite</a>
         <a href="ueber-uns.html">Über uns</a>
-        <a href="#">Kontakt</a>
+        <a href="#" id="kontakt-link">Kontakt</a>
       </nav>
+
+      <select id="languageSwitcher" aria-label="Sprache wählen">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+      </select>
 
       <!-- Burger-Menü (rechtsbündig) -->
 <button class="burger" aria-label="Menü öffnen">☰</button>
@@ -33,7 +39,7 @@
         <nav>
           <a href="#" id="startseite-link-mobile">Startseite</a>
           <a href="ueber-uns.html">Über uns</a>
-          <a href="#">Kontakt</a>
+          <a href="#" id="kontakt-link">Kontakt</a>
         </nav>
       </div>
     </div>
@@ -42,13 +48,14 @@
 
   <!-- Container -->
   <main class="scroll-fix">
-    <section class="intro">
+
+    <section id="intro" class="intro">
       <h2>Emissionen im Überblick</h2>
       <p>Diese Tabelle zeigt die jährlichen CO₂-Emissionen für verschiedene Unternehmen. Verwenden Sie die Filter, um die Daten einzugrenzen.</p>
     </section>
 
     <!-- Filter -->
-    <section class="filter-grid">
+    <section id="filter" class="filter-grid">
       <div>
         <label for="company">Unternehmen auswählen:</label>
         <select id="company">
@@ -82,18 +89,18 @@
     </section>
 
     <!-- TABELLE -->
-    <section class="table-section">
+    <section  id= "table" class="table-section">
 
       <!-- Scrollbare Tabelle -->
       <div class="tabelle-scroll-wrapper">
         <table>
           <thead>
             <tr>
-              <th>Unternehmen</th>
-              <th>Land</th>
-              <th>Branche</th>
-              <th>Emissionen (t)</th>
-              <th>Emissionsklasse</th>
+              <th id="th-name">Unternehmen</th>
+              <th id="th-land">Land</th>
+              <th id="th-branche">Branche</th>
+              <th id="th-emissionen">Emissionen (t)</th>
+              <th id="th-klasse">Emissionsklasse</th>
             </tr>
           </thead>
           <tbody>
@@ -126,11 +133,11 @@
   <footer>
     <div class="container footer">
       <nav class="footer-nav">
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
-        <a href="#">Kontakt</a>
+        <a href="#" id="footer-impressum">Impressum</a>
+        <a href="#" id="footer-datenschutz">Datenschutz</a>
+        <a href="#" id="footer-kontakt">Kontakt</a>
       </nav>
-      <p>Daten sind fiktiv – nur zu Demonstrationszwecken</p>
+      <p id="footer-hinweis">Daten sind fiktiv – nur zu Demonstrationszwecken</p>
     </div>
   </footer>
 

@@ -32,6 +32,22 @@ Ziel ist die Entwicklung einer responsiven Webseite, welche CO₂-Emissionsdaten
   • Desktop-Navigation bleibt wie gehabt sichtbar (Burger-Button + Menü werden dort automatisch ausgeblendet)
 
 
+##Stand (11.05.2025)
+    Mehrsprachigkeit & UI-Verbesserungen
+
+    - Einführung eines Sprachwechslers mit Unterstützung für Deutsch, Englisch und Arabisch
+    - Dynamisches Laden und Anwenden von Übersetzungen aus der XML-Datei
+    - Aktualisierung der Texte auf der „Über uns“-Seite basierend auf der gewählten Sprache
+    - Anpassung des HTML-Dokuments an Sprachattribute (lang, dir)
+    - Optimierung des Sortier-Dropdowns entsprechend der aktiven Sprache
+    - Behebung von Fehlern beim initialen Laden der Tabelle
+    - Verbesserung der Responsivität und Benutzerfreundlichkeit
+
+##ToDo:
+- Feedback-Popup muss noch in andere Sprachen übersetzt werden
+- `kontakt.html`-Seite ist noch zu erstellen und einzubinden
+- Startseite lädt nicht bei über-uns
+
 #Projektstruktur
 
 ├── index.html # Hauptseite der Anwendung ├── styles.css # Styling (Flexbox, Media Queries) ├── script.js # JavaScript-Logik (Datenverarbeitung) ├── daten.xml # Fiktive CO₂-Daten der Unternehmen └── README.md # Projektdokumentation

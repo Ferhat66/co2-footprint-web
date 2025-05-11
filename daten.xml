@@ -1,248 +1,804 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<unternehmen>
-  <eintrag>
-    <name>FutureSolutions</name>
-    <land>Norwegen</land>
-    <branche>Textil</branche>
-    <emissionen>120000</emissionen>
-    <klasse>E</klasse>
-  </eintrag>
-  <eintrag>
-    <name>NextSystems</name>
-    <land>Italien</land>
-    <branche>Infrastruktur</branche>
-    <emissionen>38577</emissionen>
-    <klasse>B</klasse>
-  </eintrag>
-  <eintrag>
-    <name>SolarFoods</name>
-    <land>Deutschland</land>
-    <branche>Lebensmittel</branche>
-    <emissionen>41458</emissionen>
-    <klasse>C</klasse>
-  </eintrag>
-  <eintrag>
-    <name>CleanIndustries</name>
-    <land>Frankreich</land>
-    <branche>Chemie</branche>
-    <emissionen>38940</emissionen>
-    <klasse>B</klasse>
-  </eintrag>
-  <eintrag>
-    <name>UrbanSystems</name>
-    <land>Italien</land>
-    <branche>Textil</branche>
-    <emissionen>87978</emissionen>
-    <klasse>D</klasse>
-  </eintrag>
-  <eintrag>
-    <name>BlueIndustries</name>
-    <land>Norwegen</land>
-    <branche>Lebensmittel</branche>
-    <emissionen>42036</emissionen>
-    <klasse>C</klasse>
-  </eintrag>
-  <eintrag>
-    <name>NextFoods</name>
-    <land>Frankreich</land>
-    <branche>Infrastruktur</branche>
-    <emissionen>106386</emissionen>
-    <klasse>E</klasse>
-  </eintrag>
-  <eintrag>
-    <name>UrbanSolutions</name>
-    <land>Italien</land>
-    <branche>Lebensmittel</branche>
-    <emissionen>43938</emissionen>
-    <klasse>C</klasse>
-  </eintrag>
-  <eintrag>
-    <name>CleanFoods</name>
-    <land>Schweiz</land>
-    <branche>Logistik</branche>
-    <emissionen>39894</emissionen>
-    <klasse>B</klasse>
-  </eintrag>
-  <eintrag>
-    <name>BlueDynamics</name>
-    <land>Österreich</land>
-    <branche>Textil</branche>
-    <emissionen>84146</emissionen>
-    <klasse>D</klasse>
-  </eintrag>
-  <eintrag>
-    <name>GreenFoods</name>
-    <land>Norwegen</land>
-    <branche>Automobil</branche>
-    <emissionen>54546</emissionen>
-    <klasse>C</klasse>
-  </eintrag>
-  <eintrag>
-    <name>EcoIndustries</name>
-    <land>Frankreich</land>
-    <branche>Logistik</branche>
-    <emissionen>115060</emissionen>
-    <klasse>E</klasse>
-  </eintrag>
-  <eintrag>
-    <name>NovaDynamics</name>
-    <land>Schweiz</land>
-    <branche>Infrastruktur</branche>
-    <emissionen>33994</emissionen>
-    <klasse>B</klasse>
-  </eintrag>
-  <eintrag>
-    <name>SolarDrive</name>
-    <land>Frankreich</land>
-    <branche>Textil</branche>
-    <emissionen>25080</emissionen>
-    <klasse>B</klasse>
-  </eintrag>
-  <eintrag>
-    <name>GreenLogics</name>
-    <land>Deutschland</land>
-    <branche>Lebensmittel</branche>
-    <emissionen>111670</emissionen>
-    <klasse>E</klasse>
-  </eintrag>
-  <eintrag>
-    <name>NovaIndustries</name>
-    <land>Deutschland</land>
-    <branche>Infrastruktur</branche>
-    <emissionen>47697</emissionen>
-    <klasse>C</klasse>
-  </eintrag>
-  <eintrag>
-    <name>UrbanLogics</name>
-    <land>Italien</land>
-    <branche>Chemie</branche>
-    <emissionen>25956</emissionen>
-    <klasse>B</klasse>
-  </eintrag>
-  <eintrag>
-    <name>CleanSolutions</name>
-    <land>Deutschland</land>
-    <branche>Textil</branche>
-    <emissionen>92901</emissionen>
-    <klasse>D</klasse>
-  </eintrag>
-  <eintrag>
-    <name>SmartMotors</name>
-    <land>Norwegen</land>
-    <branche>Automobil</branche>
-    <emissionen>116963</emissionen>
-    <klasse>E</klasse>
-  </eintrag>
-  <eintrag>
-    <name>CleanDrive</name>
-    <land>USA</land>
-    <branche>Lebensmittel</branche>
-    <emissionen>115124</emissionen>
-    <klasse>E</klasse>
-  </eintrag>
-  <eintrag>
-    <name>EcoMotors</name>
-    <land>Deutschland</land>
-    <branche>Lebensmittel</branche>
-    <emissionen>29990</emissionen>
-    <klasse>B</klasse>
-  </eintrag>
-  <eintrag>
-    <name>FutureLogics</name>
-    <land>Spanien</land>
-    <branche>Infrastruktur</branche>
-    <emissionen>23055</emissionen>
-    <klasse>B</klasse>
-  </eintrag>
-  <eintrag>
-    <name>SolarSolutions</name>
-    <land>USA</land>
-    <branche>Lebensmittel</branche>
-    <emissionen>103470</emissionen>
-    <klasse>E</klasse>
-  </eintrag>
-  <eintrag>
-    <name>FutureMotors</name>
-    <land>Spanien</land>
-    <branche>Automobil</branche>
-    <emissionen>45001</emissionen>
-    <klasse>C</klasse>
-  </eintrag>
-  <eintrag>
-    <name>BlueFoods</name>
-    <land>Frankreich</land>
-    <branche>Technologie</branche>
-    <emissionen>40494</emissionen>
-    <klasse>C</klasse>
-  </eintrag>
-  <eintrag>
-    <name>SmartIndustries</name>
-    <land>Norwegen</land>
-    <branche>Textil</branche>
-    <emissionen>35322</emissionen>
-    <klasse>B</klasse>
-  </eintrag>
-  <eintrag>
-    <name>UrbanDynamics</name>
-    <land>USA</land>
-    <branche>Technologie</branche>
-    <emissionen>70159</emissionen>
-    <klasse>D</klasse>
-  </eintrag>
-  <eintrag>
-    <name>EcoSystems</name>
-    <land>Österreich</land>
-    <branche>Logistik</branche>
-    <emissionen>111770</emissionen>
-    <klasse>E</klasse>
-  </eintrag>
-  <eintrag>
-    <name>BlueSolutions</name>
-    <land>Italien</land>
-    <branche>Textil</branche>
-    <emissionen>99193</emissionen>
-    <klasse>D</klasse>
-  </eintrag>
-  <eintrag>
-    <name>UrbanSystems</name>
-    <land>Deutschland</land>
-    <branche>Lebensmittel</branche>
-    <emissionen>108243</emissionen>
-    <klasse>E</klasse>
-  </eintrag>
-  <eintrag>
-    <name>NovaFoods</name>
-    <land>USA</land>
-    <branche>Textil</branche>
-    <emissionen>96845</emissionen>
-    <klasse>D</klasse>
-  </eintrag>
-  <eintrag>
-    <name>SmartFoods</name>
-    <land>Österreich</land>
-    <branche>Lebensmittel</branche>
-    <emissionen>31788</emissionen>
-    <klasse>B</klasse>
-  </eintrag>
-  <eintrag>
-    <name>EcoFoods</name>
-    <land>Schweiz</land>
-    <branche>Textil</branche>
-    <emissionen>80176</emissionen>
-    <klasse>D</klasse>
-  </eintrag>
-  <eintrag>
-    <name>SolarIndustries</name>
-    <land>Deutschland</land>
-    <branche>Infrastruktur</branche>
-    <emissionen>67193</emissionen>
-    <klasse>C</klasse>
-  </eintrag>
-  <eintrag>
-    <name>GlobalMotors</name>
-    <land>Deutschland</land>
-    <branche>Automobil</branche>
-    <emissionen>84107</emissionen>
-    <klasse>D</klasse>
-  </eintrag>
-</unternehmen>
+<root>
+   <unternehmen>
+      <eintrag>
+         <name>
+            <de>FutureSolutions</de>
+            <en>FutureSolutions</en>
+            <ar>حلول المستقبل</ar>
+         </name>
+         <land>
+            <de>Norwegen</de>
+            <en>Norway</en>
+            <ar>النرويج</ar>
+         </land>
+         <branche>
+            <de>Textil</de>
+            <en>Textile</en>
+            <ar>المنسوجات</ar>
+         </branche>
+         <emissionen>120000</emissionen>
+         <klasse>E</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>NextSystems</de>
+            <en>NextSystems</en>
+            <ar>الأنظمة التالية</ar>
+         </name>
+         <land>
+            <de>Italien</de>
+            <en>Italy</en>
+            <ar>إيطاليا</ar>
+         </land>
+         <branche>
+            <de>Infrastruktur</de>
+            <en>Infrastructure</en>
+            <ar>البنية التحتية</ar>
+         </branche>
+         <emissionen>38577</emissionen>
+         <klasse>B</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>SolarFoods</de>
+            <en>SolarFoods</en>
+            <ar>أغذية شمسية</ar>
+         </name>
+         <land>
+            <de>Deutschland</de>
+            <en>Germany</en>
+            <ar>ألمانيا</ar>
+         </land>
+         <branche>
+            <de>Lebensmittel</de>
+            <en>Food</en>
+            <ar>الأغذية</ar>
+         </branche>
+         <emissionen>41458</emissionen>
+         <klasse>C</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>CleanIndustries</de>
+            <en>CleanIndustries</en>
+            <ar>الصناعات النظيفة</ar>
+         </name>
+         <land>
+            <de>Frankreich</de>
+            <en>France</en>
+            <ar>فرنسا</ar>
+         </land>
+         <branche>
+            <de>Chemie</de>
+            <en>Chemistry</en>
+            <ar>الكيمياء</ar>
+         </branche>
+         <emissionen>38940</emissionen>
+         <klasse>B</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>UrbanSystems</de>
+            <en>UrbanSystems</en>
+            <ar>أنظمة حضرية</ar>
+         </name>
+         <land>
+            <de>Italien</de>
+            <en>Italy</en>
+            <ar>إيطاليا</ar>
+         </land>
+         <branche>
+            <de>Textil</de>
+            <en>Textile</en>
+            <ar>المنسوجات</ar>
+         </branche>
+         <emissionen>87978</emissionen>
+         <klasse>D</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>BlueIndustries</de>
+            <en>BlueIndustries</en>
+            <ar>الصناعات الزرقاء</ar>
+         </name>
+         <land>
+            <de>Norwegen</de>
+            <en>Norway</en>
+            <ar>النرويج</ar>
+         </land>
+         <branche>
+            <de>Lebensmittel</de>
+            <en>Food</en>
+            <ar>الأغذية</ar>
+         </branche>
+         <emissionen>42036</emissionen>
+         <klasse>C</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>NextFoods</de>
+            <en>NextFoods</en>
+            <ar>أغذية المستقبل</ar>
+         </name>
+         <land>
+            <de>Frankreich</de>
+            <en>France</en>
+            <ar>فرنسا</ar>
+         </land>
+         <branche>
+            <de>Infrastruktur</de>
+            <en>Infrastructure</en>
+            <ar>البنية التحتية</ar>
+         </branche>
+         <emissionen>106386</emissionen>
+         <klasse>E</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>UrbanSolutions</de>
+            <en>UrbanSolutions</en>
+            <ar>الحلول الحضرية</ar>
+         </name>
+         <land>
+            <de>Italien</de>
+            <en>Italy</en>
+            <ar>إيطاليا</ar>
+         </land>
+         <branche>
+            <de>Lebensmittel</de>
+            <en>Food</en>
+            <ar>الأغذية</ar>
+         </branche>
+         <emissionen>43938</emissionen>
+         <klasse>C</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>CleanFoods</de>
+            <en>CleanFoods</en>
+            <ar>الأغذية النظيفة</ar>
+         </name>
+         <land>
+            <de>Schweiz</de>
+            <en>Switzerland</en>
+            <ar>سويسرا</ar>
+         </land>
+         <branche>
+            <de>Logistik</de>
+            <en>Logistics</en>
+            <ar>الخدمات اللوجستية</ar>
+         </branche>
+         <emissionen>39894</emissionen>
+         <klasse>B</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>BlueDynamics</de>
+            <en>BlueDynamics</en>
+            <ar>الابتكارات الزرقاء</ar>
+         </name>
+         <land>
+            <de>Österreich</de>
+            <en>Austria</en>
+            <ar>النمسا</ar>
+         </land>
+         <branche>
+            <de>Textil</de>
+            <en>Textile</en>
+            <ar>المنسوجات</ar>
+         </branche>
+         <emissionen>84146</emissionen>
+         <klasse>D</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>GreenFoods</de>
+            <en>GreenFoods</en>
+            <ar>الأغذية الخضراء</ar>
+         </name>
+         <land>
+            <de>Norwegen</de>
+            <en>Norway</en>
+            <ar>النرويج</ar>
+         </land>
+         <branche>
+            <de>Automobil</de>
+            <en>Automotive</en>
+            <ar>صناعة السيارات</ar>
+         </branche>
+         <emissionen>54546</emissionen>
+         <klasse>C</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>EcoIndustries</de>
+            <en>EcoIndustries</en>
+            <ar>الصناعات البيئية</ar>
+         </name>
+         <land>
+            <de>Frankreich</de>
+            <en>France</en>
+            <ar>فرنسا</ar>
+         </land>
+         <branche>
+            <de>Logistik</de>
+            <en>Logistics</en>
+            <ar>الخدمات اللوجستية</ar>
+         </branche>
+         <emissionen>115060</emissionen>
+         <klasse>E</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>NovaDynamics</de>
+            <en>NovaDynamics</en>
+            <ar>نوفا دايناميكس</ar>
+         </name>
+         <land>
+            <de>Schweiz</de>
+            <en>Switzerland</en>
+            <ar>سويسرا</ar>
+         </land>
+         <branche>
+            <de>Infrastruktur</de>
+            <en>Infrastructure</en>
+            <ar>البنية التحتية</ar>
+         </branche>
+         <emissionen>33994</emissionen>
+         <klasse>B</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>SolarDrive</de>
+            <en>SolarDrive</en>
+            <ar>قيادة شمسية</ar>
+         </name>
+         <land>
+            <de>Frankreich</de>
+            <en>France</en>
+            <ar>فرنسا</ar>
+         </land>
+         <branche>
+            <de>Textil</de>
+            <en>Textile</en>
+            <ar>المنسوجات</ar>
+         </branche>
+         <emissionen>25080</emissionen>
+         <klasse>B</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>GreenLogics</de>
+            <en>GreenLogics</en>
+            <ar>منطق أخضر</ar>
+         </name>
+         <land>
+            <de>Deutschland</de>
+            <en>Germany</en>
+            <ar>ألمانيا</ar>
+         </land>
+         <branche>
+            <de>Lebensmittel</de>
+            <en>Food</en>
+            <ar>الأغذية</ar>
+         </branche>
+         <emissionen>111670</emissionen>
+         <klasse>E</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>NovaIndustries</de>
+            <en>NovaIndustries</en>
+            <ar>صناعات نوفا</ar>
+         </name>
+         <land>
+            <de>Deutschland</de>
+            <en>Germany</en>
+            <ar>ألمانيا</ar>
+         </land>
+         <branche>
+            <de>Infrastruktur</de>
+            <en>Infrastructure</en>
+            <ar>البنية التحتية</ar>
+         </branche>
+         <emissionen>47697</emissionen>
+         <klasse>C</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>UrbanLogics</de>
+            <en>UrbanLogics</en>
+            <ar>المنطق الحضري</ar>
+         </name>
+         <land>
+            <de>Italien</de>
+            <en>Italy</en>
+            <ar>إيطاليا</ar>
+         </land>
+         <branche>
+            <de>Chemie</de>
+            <en>Chemistry</en>
+            <ar>الكيمياء</ar>
+         </branche>
+         <emissionen>25956</emissionen>
+         <klasse>B</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>CleanSolutions</de>
+            <en>CleanSolutions</en>
+            <ar>الحلول النظيفة</ar>
+         </name>
+         <land>
+            <de>Deutschland</de>
+            <en>Germany</en>
+            <ar>ألمانيا</ar>
+         </land>
+         <branche>
+            <de>Textil</de>
+            <en>Textile</en>
+            <ar>المنسوجات</ar>
+         </branche>
+         <emissionen>92901</emissionen>
+         <klasse>D</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>SmartMotors</de>
+            <en>SmartMotors</en>
+            <ar>المحركات الذكية</ar>
+         </name>
+         <land>
+            <de>Norwegen</de>
+            <en>Norway</en>
+            <ar>النرويج</ar>
+         </land>
+         <branche>
+            <de>Automobil</de>
+            <en>Automotive</en>
+            <ar>صناعة السيارات</ar>
+         </branche>
+         <emissionen>116963</emissionen>
+         <klasse>E</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>CleanDrive</de>
+            <en>CleanDrive</en>
+            <ar>القيادة النظيفة</ar>
+         </name>
+         <land>
+            <de>USA</de>
+            <en>USA</en>
+            <ar>الولايات المتحدة</ar>
+         </land>
+         <branche>
+            <de>Lebensmittel</de>
+            <en>Food</en>
+            <ar>الأغذية</ar>
+         </branche>
+         <emissionen>115124</emissionen>
+         <klasse>E</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>EcoMotors</de>
+            <en>EcoMotors</en>
+            <ar>المحركات البيئية</ar>
+         </name>
+         <land>
+            <de>Deutschland</de>
+            <en>Germany</en>
+            <ar>ألمانيا</ar>
+         </land>
+         <branche>
+            <de>Lebensmittel</de>
+            <en>Food</en>
+            <ar>الأغذية</ar>
+         </branche>
+         <emissionen>29990</emissionen>
+         <klasse>B</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>FutureLogics</de>
+            <en>FutureLogics</en>
+            <ar>منطق المستقبل</ar>
+         </name>
+         <land>
+            <de>Spanien</de>
+            <en>Spain</en>
+            <ar>إسبانيا</ar>
+         </land>
+         <branche>
+            <de>Infrastruktur</de>
+            <en>Infrastructure</en>
+            <ar>البنية التحتية</ar>
+         </branche>
+         <emissionen>23055</emissionen>
+         <klasse>B</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>SolarSolutions</de>
+            <en>SolarSolutions</en>
+            <ar>حلول شمسية</ar>
+         </name>
+         <land>
+            <de>USA</de>
+            <en>USA</en>
+            <ar>الولايات المتحدة</ar>
+         </land>
+         <branche>
+            <de>Lebensmittel</de>
+            <en>Food</en>
+            <ar>الأغذية</ar>
+         </branche>
+         <emissionen>103470</emissionen>
+         <klasse>E</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>FutureMotors</de>
+            <en>FutureMotors</en>
+            <ar>محركات المستقبل</ar>
+         </name>
+         <land>
+            <de>Spanien</de>
+            <en>Spain</en>
+            <ar>إسبانيا</ar>
+         </land>
+         <branche>
+            <de>Automobil</de>
+            <en>Automotive</en>
+            <ar>صناعة السيارات</ar>
+         </branche>
+         <emissionen>45001</emissionen>
+         <klasse>C</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>BlueFoods</de>
+            <en>BlueFoods</en>
+            <ar>الأطعمة الزرقاء</ar>
+         </name>
+         <land>
+            <de>Frankreich</de>
+            <en>France</en>
+            <ar>فرنسا</ar>
+         </land>
+         <branche>
+            <de>Technologie</de>
+            <en>Technology</en>
+            <ar>التكنولوجيا</ar>
+         </branche>
+         <emissionen>40494</emissionen>
+         <klasse>C</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>SmartIndustries</de>
+            <en>SmartIndustries</en>
+            <ar>الصناعات الذكية</ar>
+         </name>
+         <land>
+            <de>Norwegen</de>
+            <en>Norway</en>
+            <ar>النرويج</ar>
+         </land>
+         <branche>
+            <de>Textil</de>
+            <en>Textile</en>
+            <ar>المنسوجات</ar>
+         </branche>
+         <emissionen>35322</emissionen>
+         <klasse>B</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>UrbanDynamics</de>
+            <en>UrbanDynamics</en>
+            <ar>الديناميات الحضرية</ar>
+         </name>
+         <land>
+            <de>USA</de>
+            <en>USA</en>
+            <ar>الولايات المتحدة</ar>
+         </land>
+         <branche>
+            <de>Technologie</de>
+            <en>Technology</en>
+            <ar>التكنولوجيا</ar>
+         </branche>
+         <emissionen>70159</emissionen>
+         <klasse>D</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>EcoSystems</de>
+            <en>EcoSystems</en>
+            <ar>الأنظمة البيئية</ar>
+         </name>
+         <land>
+            <de>Österreich</de>
+            <en>Austria</en>
+            <ar>النمسا</ar>
+         </land>
+         <branche>
+            <de>Logistik</de>
+            <en>Logistics</en>
+            <ar>الخدمات اللوجستية</ar>
+         </branche>
+         <emissionen>111770</emissionen>
+         <klasse>E</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>BlueSolutions</de>
+            <en>BlueSolutions</en>
+            <ar>الحلول الزرقاء</ar>
+         </name>
+         <land>
+            <de>Italien</de>
+            <en>Italy</en>
+            <ar>إيطاليا</ar>
+         </land>
+         <branche>
+            <de>Textil</de>
+            <en>Textile</en>
+            <ar>المنسوجات</ar>
+         </branche>
+         <emissionen>99193</emissionen>
+         <klasse>D</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>UrbanSystems</de>
+            <en>UrbanSystems</en>
+            <ar>أنظمة حضرية</ar>
+         </name>
+         <land>
+            <de>Deutschland</de>
+            <en>Germany</en>
+            <ar>ألمانيا</ar>
+         </land>
+         <branche>
+            <de>Lebensmittel</de>
+            <en>Food</en>
+            <ar>الأغذية</ar>
+         </branche>
+         <emissionen>108243</emissionen>
+         <klasse>E</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>NovaFoods</de>
+            <en>NovaFoods</en>
+            <ar>أغذية نوفا</ar>
+         </name>
+         <land>
+            <de>USA</de>
+            <en>USA</en>
+            <ar>الولايات المتحدة</ar>
+         </land>
+         <branche>
+            <de>Textil</de>
+            <en>Textile</en>
+            <ar>المنسوجات</ar>
+         </branche>
+         <emissionen>96845</emissionen>
+         <klasse>D</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>SmartFoods</de>
+            <en>SmartFoods</en>
+            <ar>الأغذية الذكية</ar>
+         </name>
+         <land>
+            <de>Österreich</de>
+            <en>Austria</en>
+            <ar>النمسا</ar>
+         </land>
+         <branche>
+            <de>Lebensmittel</de>
+            <en>Food</en>
+            <ar>الأغذية</ar>
+         </branche>
+         <emissionen>31788</emissionen>
+         <klasse>B</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>EcoFoods</de>
+            <en>EcoFoods</en>
+            <ar>الأغذية البيئية</ar>
+         </name>
+         <land>
+            <de>Schweiz</de>
+            <en>Switzerland</en>
+            <ar>سويسرا</ar>
+         </land>
+         <branche>
+            <de>Textil</de>
+            <en>Textile</en>
+            <ar>المنسوجات</ar>
+         </branche>
+         <emissionen>80176</emissionen>
+         <klasse>D</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>SolarIndustries</de>
+            <en>SolarIndustries</en>
+            <ar>صناعات شمسية</ar>
+         </name>
+         <land>
+            <de>Deutschland</de>
+            <en>Germany</en>
+            <ar>ألمانيا</ar>
+         </land>
+         <branche>
+            <de>Infrastruktur</de>
+            <en>Infrastructure</en>
+            <ar>البنية التحتية</ar>
+         </branche>
+         <emissionen>67193</emissionen>
+         <klasse>C</klasse>
+      </eintrag>
+      <eintrag>
+         <name>
+            <de>GlobalMotors</de>
+            <en>GlobalMotors</en>
+            <ar>محركات عالمية</ar>
+         </name>
+         <land>
+            <de>Deutschland</de>
+            <en>Germany</en>
+            <ar>ألمانيا</ar>
+         </land>
+         <branche>
+            <de>Automobil</de>
+            <en>Automotive</en>
+            <ar>صناعة السيارات</ar>
+         </branche>
+         <emissionen>84107</emissionen>
+         <klasse>D</klasse>
+      </eintrag>
+   </unternehmen>
+   <translations>
+      <language code="de">
+         <startseite>Startseite</startseite>
+         <ueberuns>Über uns</ueberuns>
+         <kontakt>Kontakt</kontakt>
+         <introTitle>Emissionen im Überblick</introTitle>
+         <introText>Diese Tabelle zeigt die jährlichen CO₂-Emissionen für verschiedene Unternehmen. Verwenden Sie die Filter, um die Daten einzugrenzen.</introText>
+         <companyLabel>Unternehmen auswählen:</companyLabel>
+         <countryLabel>Land auswählen:</countryLabel>
+         <industryLabel>Branche auswählen:</industryLabel>
+         <sortLabel>Sortieren nach:</sortLabel>
+         <searchLabel>Suche nach Emissionsklasse:</searchLabel>
+         <entriesLabel>Zeige:</entriesLabel>
+         <prevButton>Zurück</prevButton>
+         <nextButton>Weiter</nextButton>
+         <thName>Unternehmen</thName>
+         <thLand>Land</thLand>
+         <thBranche>Branche</thBranche>
+         <thEmissionen>Emissionen (t)</thEmissionen>
+         <thKlasse>Emissionsklasse</thKlasse>
+         <sortOptions>
+            <emissionAsc>Emissionen (aufsteigend)</emissionAsc>
+            <emissionDesc>Emissionen (absteigend)</emissionDesc>
+            <name>Name (A-Z)</name>
+         </sortOptions>
+         <entriesUnit>Einträge</entriesUnit>
+         <pageText>Seite</pageText>
+         <of>von</of>
+         <footer>
+            <impressum>Impressum</impressum>
+            <datenschutz>Datenschutz</datenschutz>
+            <kontakt>Kontakt</kontakt>
+            <hinweis>Daten sind fiktiv – nur zu Demonstrationszwecken</hinweis>
+         </footer>
+         <about>
+            <missionTitle>Unsere Mission</missionTitle>
+            <missionText>CO₂-Footprint macht Emissionen sichtbar – verständlich, vergleichbar und für alle zugänglich. Unsere Mission ist es, ein neues Bewusstsein für Umweltwirkungen zu schaffen. Wir möchten Menschen befähigen, fundierte Entscheidungen zu treffen – sei es im Konsum, im Berufsalltag oder auf politischer Ebene. Denn: Nur wer die Auswirkungen seines Handelns kennt, kann verantwortungsvoll handeln. Transparente und verständliche Informationen bilden dabei die Grundlage – genau hier setzt unsere Plattform an.</missionText>
+            <teamTitle>Wer steckt dahinter?</teamTitle>
+            <teamText>Hinter dem Projekt steht ein kleines, interdisziplinäres Team, das Design, Technik und Umweltwissen zusammenbringt. Was uns vereint, ist der Anspruch, gesellschaftlich relevante Themen zugänglich und nachvollziehbar zu machen. Wir arbeiten stetig an neuen Inhalten, Funktionen und Visualisierungen. Mehr zu den Köpfen hinter CO₂-Footprint wird bald auf dieser Seite zu sehen sein – wir freuen uns schon, unsere Vision mit euch zu teilen.</teamText>
+            <whyTitle>Warum CO₂-Daten?</whyTitle>
+            <whyText>CO₂-Emissionen gehören zu den wichtigsten Einflussfaktoren auf das globale Klima – und sind gleichzeitig schwer greifbar. Unser Ziel ist es, abstrakte Zahlen greifbar und erfahrbar zu machen. Mit fiktiven Unternehmensdaten schaffen wir eine verständliche Grundlage, um Zusammenhänge zu erkennen und Emissionen vergleichbar zu machen. So wird deutlich: Jede Entscheidung – ob im Alltag, in Unternehmen oder in der Politik – hinterlässt einen ökologischen Fußabdruck.</whyText>
+            <designTitle>Transparenz &amp; Einfachheit</designTitle>
+            <designText>Unsere Plattform folgt einem klaren Prinzip: Reduktion auf das Wesentliche. Wir setzen auf ein schlichtes, modernes Design mit hoher Usability. Tabellen, Filteroptionen und klare Visualisierungen unterstützen die Nutzer:innen beim schnellen Erfassen der Informationen. Dabei ist uns wichtig, dass die Plattform für alle zugänglich ist – egal ob Einsteiger:in, Schüler:in, Studierende oder Fachpublikum. Wir möchten informieren, inspirieren und vor allem: zum Nachdenken anregen.</designText>
+         </about>
+      </language>
+      <language code="en">
+         <startseite>Home</startseite>
+         <ueberuns>About Us</ueberuns>
+         <kontakt>Contact</kontakt>
+         <introTitle>Overview of Emissions</introTitle>
+         <introText>This table shows the annual CO₂ emissions for various companies. Use the filters to narrow down the data.</introText>
+         <companyLabel>Select Company:</companyLabel>
+         <countryLabel>Select Country:</countryLabel>
+         <industryLabel>Select Industry:</industryLabel>
+         <sortLabel>Sort by:</sortLabel>
+         <searchLabel>Search by Emission Class:</searchLabel>
+         <entriesLabel>Show:</entriesLabel>
+         <prevButton>Previous</prevButton>
+         <nextButton>Next</nextButton>
+         <thName>Company</thName>
+         <thLand>Country</thLand>
+         <thBranche>Industry</thBranche>
+         <thEmissionen>Emissions (t)</thEmissionen>
+         <thKlasse>Emission Class</thKlasse>
+         <sortOptions>
+            <emissionAsc>Emissions (ascending)</emissionAsc>
+            <emissionDesc>Emissions (descending)</emissionDesc>
+            <name>Name (A-Z)</name>
+         </sortOptions>
+         <entriesUnit>entries</entriesUnit>
+         <pageText>Page</pageText>
+         <of>of</of>
+         <footer>
+            <impressum>Imprint</impressum>
+            <datenschutz>Privacy Policy</datenschutz>
+            <kontakt>Contact</kontakt>
+            <hinweis>Data is fictitious – for demonstration purposes only</hinweis>
+         </footer>
+         <about>
+            <missionTitle>Our Mission</missionTitle>
+            <missionText>CO₂-Footprint makes emissions visible – understandable, comparable, and accessible to all. Our mission is to raise awareness of environmental impacts. We want to enable people to make informed decisions – whether in consumption, everyday work life, or politics. Because only those who understand the consequences of their actions can act responsibly. Transparent and understandable information forms the basis – and that’s exactly what our platform delivers.</missionText>
+            <teamTitle>Who's behind it?</teamTitle>
+            <teamText>Behind the project is a small, interdisciplinary team that combines design, technology, and environmental knowledge. What unites us is the aim to make socially relevant topics accessible and comprehensible. We are constantly working on new content, features, and visualizations. More about the people behind CO₂-Footprint will soon appear on this page – we’re excited to share our vision with you.</teamText>
+            <whyTitle>Why CO₂ data?</whyTitle>
+            <whyText>CO₂ emissions are one of the most important factors affecting the global climate – yet they are hard to grasp. Our goal is to make abstract numbers tangible and understandable. With fictional company data, we provide a comprehensible basis to recognize correlations and make emissions comparable. This shows: Every decision – whether in everyday life, in companies or in politics – leaves an ecological footprint.</whyText>
+            <designTitle>Transparency &amp; Simplicity</designTitle>
+            <designText>Our platform follows a clear principle: reduction to the essentials. We rely on a simple, modern design with high usability. Tables, filter options and clear visualizations support users in quickly grasping the information. It is important to us that the platform is accessible to everyone – whether beginners, students, or experts. We aim to inform, inspire and most of all: make people think.</designText>
+         </about>
+      </language>
+      <language code="ar">
+         <startseite>الصفحة الرئيسية</startseite>
+         <ueberuns>معلومات عنا</ueberuns>
+         <kontakt>اتصال</kontakt>
+         <introTitle>نظرة عامة على الانبعاثات</introTitle>
+         <introText>يعرض هذا الجدول انبعاثات ثاني أكسيد الكربون السنوية لمختلف الشركات. استخدم عوامل التصفية لتضييق البيانات.</introText>
+         <companyLabel>اختر شركة:</companyLabel>
+         <countryLabel>اختر دولة:</countryLabel>
+         <industryLabel>اختر قطاع:</industryLabel>
+         <sortLabel>ترتيب حسب:</sortLabel>
+         <searchLabel>ابحث حسب فئة الانبعاثات:</searchLabel>
+         <entriesLabel>عرض:</entriesLabel>
+         <prevButton>السابق</prevButton>
+         <nextButton>التالي</nextButton>
+         <thName>الشركة</thName>
+         <thLand>الدولة</thLand>
+         <thBranche>القطاع</thBranche>
+         <thEmissionen>الانبعاثات (طن)</thEmissionen>
+         <thKlasse>فئة الانبعاثات</thKlasse>
+         <sortOptions>
+            <emissionAsc>الانبعاثات (تصاعدي)</emissionAsc>
+            <emissionDesc>الانبعاثات (تنازلي)</emissionDesc>
+            <name>الاسم (أ - ي)</name>
+         </sortOptions>
+         <entriesUnit>إدخالات</entriesUnit>
+         <pageText>الصفحة</pageText>
+         <of>من</of>
+         <footer>
+            <impressum>البيان القانوني</impressum>
+            <datenschutz>سياسة الخصوصية</datenschutz>
+            <kontakt>اتصال</kontakt>
+            <hinweis>البيانات خيالية - لأغراض العرض فقط</hinweis>
+         </footer>
+         <about>
+            <missionTitle>مهمتنا</missionTitle>
+            <missionText>تجعل CO₂-Footprint الانبعاثات مرئية – مفهومة، قابلة للمقارنة ومتاحة للجميع. مهمتنا هي خلق وعي جديد بالتأثيرات البيئية. نرغب في تمكين الناس من اتخاذ قرارات مستنيرة – سواء في الاستهلاك أو في الحياة اليومية أو على المستوى السياسي. لأن من يعرف تأثير أفعاله، يمكنه أن يتصرف بمسؤولية. تشكل المعلومات الشفافة والمفهومة الأساس – وهنا يأتي دور منصتنا.</missionText>
+            <teamTitle>المشروع؟</teamTitle>
+            <teamText>يقف وراء هذا المشروع فريق صغير متعدد التخصصات يجمع بين التصميم والتقنية والمعرفة البيئية. ما يجمعنا هو السعي لجعل المواضيع ذات الصلة بالمجتمع مفهومة ومتاحة للجميع. نحن نعمل باستمرار على تطوير محتوى ووظائف وتصويرات جديدة. المزيد عن فريق.</teamText>
+            <whyTitle>لماذا بيانات ثاني أكسيد الكربون؟</whyTitle>
+            <whyText>تُعد انبعاثات CO₂ من أهم العوامل المؤثرة على المناخ العالمي – لكنها في الوقت نفسه صعبة الفهم. هدفنا هو جعل الأرقام المجردة ملموسة ومفهومة. من خلال بيانات شركات وهمية، نوفر أساسًا يمكن من خلاله فهم العلاقات وجعل الانبعاثات قابلة للمقارنة. هذا يوضح أن كل قرار – سواء في الحياة اليومية أو في الشركات أو في السياسة – يترك بصمة بيئية.</whyText>
+            <designTitle>الشفافية والبساطة</designTitle>
+            <designText>تتبع منصتنا مبدأً واضحًا: التركيز على الأساسيات. نعتمد على تصميم بسيط وحديث وسهل الاستخدام. تدعم الجداول وخيارات التصفية والتصويرات الواضحة المستخدمين في استيعاب المعلومات بسرعة. من المهم بالنسبة لنا أن تكون المنصة متاحة للجميع – سواء المبتدئين أو الطلاب أو المتخصصين. نهدف إلى الإعلام، والإلهام، وقبل كل شيء: تحفيز التفكير.</designText>
+         </about>
+      </language>
+   </translations>
+</root>

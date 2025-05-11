@@ -17,17 +17,24 @@
     </div>
     <div class="header-right">
       <nav class="main-nav">
-        <a href="index.html">Startseite</a>
+        <a id="startseite-link" href="index.html">Startseite</a>
         <a href="ueber-uns.html">Über uns</a>
-        <a href="#">Kontakt</a>
+        <a href="#" id="kontakt-link">Kontakt</a>
       </nav>
+      
+      <select id="languageSwitcher" aria-label="Sprache wählen">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+      </select>
+
       <button class="burger" aria-label="Menü öffnen">☰</button>
       <div class="offcanvas-nav" id="mobileMenu">
         <button class="close-btn" aria-label="Menü schließen">✕</button>
         <nav>
-          <a href="index.html">Startseite</a>
+          <a id="startseite-link-mobile" href="index.html">Startseite</a>
           <a href="ueber-uns.html">Über uns</a>
-          <a href="#">Kontakt</a>
+          <a href="#" id="kontakt-link">Kontakt</a>
         </nav>
       </div>
     </div>
@@ -35,25 +42,26 @@
 </header>
 
 <!-- Hauptinhalt -->
-<main class="container">
-  <section class="intro">
-    <h2>Unsere Mission</h2>
-    <p>CO₂-Footprint macht Emissionen sichtbar – verständlich, vergleichbar und für alle zugänglich. Unsere Mission ist es, ein neues Bewusstsein für Umweltwirkungen zu schaffen. Wir möchten Menschen befähigen, fundierte Entscheidungen zu treffen – sei es im Konsum, im Berufsalltag oder auf politischer Ebene. Denn: Nur wer die Auswirkungen seines Handelns kennt, kann verantwortungsvoll handeln. Transparente und verständliche Informationen bilden dabei die Grundlage – genau hier setzt unsere Plattform an.</p>
-  </section>
+<main class="scroll-fix">
 
-  <section class="about-team">
-    <h2>Wer steckt dahinter?</h2>
-    <p>Hinter dem Projekt steht ein kleines, interdisziplinäres Team, das Design, Technik und Umweltwissen zusammenbringt. Was uns vereint, ist der Anspruch, gesellschaftlich relevante Themen zugänglich und nachvollziehbar zu machen. Wir arbeiten stetig an neuen Inhalten, Funktionen und Visualisierungen. Mehr zu den Köpfen hinter CO₂-Footprint wird bald auf dieser Seite zu sehen sein – wir freuen uns schon, unsere Vision mit euch zu teilen.</p>
+  <section class="container intro">
+    <h2 id="about-mission-title">Unsere Mission</h2>
+    <p id="about-mission-text">CO₂-Footprint macht Emissionen sichtbar …</p>
   </section>
-
-  <section class="about-purpose">
-    <h2>Warum CO₂-Daten?</h2>
-    <p>CO₂-Emissionen gehören zu den wichtigsten Einflussfaktoren auf das globale Klima – und sind gleichzeitig schwer greifbar. Unser Ziel ist es, abstrakte Zahlen greifbar und erfahrbar zu machen. Mit fiktiven Unternehmensdaten schaffen wir eine verständliche Grundlage, um Zusammenhänge zu erkennen und Emissionen vergleichbar zu machen. So wird deutlich: Jede Entscheidung – ob im Alltag, in Unternehmen oder in der Politik – hinterlässt einen ökologischen Fußabdruck.</p>
+  
+  <section class="container about-team">
+    <h2 id="about-team-title">Wer steckt dahinter?</h2>
+    <p id="about-team-text">Hinter dem Projekt steht ein kleines …</p>
   </section>
-
-  <section class="about-design">
-    <h2>Transparenz & Einfachheit</h2>
-    <p>Unsere Plattform folgt einem klaren Prinzip: Reduktion auf das Wesentliche. Wir setzen auf ein schlichtes, modernes Design mit hoher Usability. Tabellen, Filteroptionen und klare Visualisierungen unterstützen die Nutzer:innen beim schnellen Erfassen der Informationen. Dabei ist uns wichtig, dass die Plattform für alle zugänglich ist – egal ob Einsteiger:in, Schüler:in, Studierende oder Fachpublikum. Wir möchten informieren, inspirieren und vor allem: zum Nachdenken anregen.</p>
+  
+  <section class="container about-purpose">
+    <h2 id="about-why-title">Warum CO₂-Daten?</h2>
+    <p id="about-why-text">CO₂-Emissionen gehören zu den wichtigsten …</p>
+  </section>
+  
+  <section class=" container about-design">
+    <h2 id="about-design-title">Transparenz & Einfachheit</h2>
+    <p id="about-design-text">Unsere Plattform folgt einem klaren Prinzip …</p>
   </section>
 
   <section class="about-contact">
@@ -72,14 +80,14 @@
       </div>
     </form>
   </section>
-
+</main>
 <!-- Footer -->
 <footer>
   <div class="container footer">
     <nav class="footer-nav">
       <a href="#">Impressum</a>
       <a href="#">Datenschutz</a>
-      <a href="#">Kontakt</a>
+      <a href="#" id="kontakt-link">Kontakt</a>
     </nav>
     <p>Daten sind fiktiv – nur zu Demonstrationszwecken</p>
   </div>
