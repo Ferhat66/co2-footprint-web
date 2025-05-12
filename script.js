@@ -49,6 +49,11 @@ async function ladeUndVerarbeiteTranslations() {
         Array.from(item.children).forEach(subitem => {
           gespeicherteTranslations[code].about[subitem.tagName] = subitem.textContent;
         });
+      } else if (item.tagName === "popup") {
+        gespeicherteTranslations[code].popup = {};
+        Array.from(item.children).forEach(subitem => {
+          gespeicherteTranslations[code].popup[subitem.tagName] = subitem.textContent;
+        });
       } else {
         gespeicherteTranslations[code][item.tagName] = item.textContent;
       }
@@ -272,12 +277,25 @@ function fuelleDropdown(xml, tagName, selectId) {
   }
 
   function resetFilters() {
-    document.getElementById("company").value = "";
-    document.getElementById("country").value = "";
-    document.getElementById("industry").value = "";
-    document.getElementById("search").value = "";
-    document.getElementById("sort").value = "emission-asc";
-    document.getElementById("entriesPerPage").value = "10";
+    const company = document.getElementById("company");
+    const country = document.getElementById("country");
+    const industry = document.getElementById("industry");
+    const search = document.getElementById("search");
+    const sort = document.getElementById("sort");
+    const entries = document.getElementById("entriesPerPage");
+  
+    if (!company || !country || !industry || !search || !sort || !entries) {
+      console.warn("Filter-Elemente nicht vorhanden – resetFilters wird übersprungen.");
+      return;
+    }
+  
+    company.value = "";
+    country.value = "";
+    industry.value = "";
+    search.value = "";
+    sort.value = "emission-asc";
+    entries.value = "10";
+  
     anzahlProSeite = 10;
     aktuelleSeite = 1;
   
@@ -288,6 +306,9 @@ function fuelleDropdown(xml, tagName, selectId) {
 
   function aktualisiereSprache(sprache) {
     const t = gespeicherteTranslations[sprache];
+    if (!window.location.pathname.includes("ueber-uns.html")) {
+      aktualisiereSortDropdown(sprache);
+    }
     if (!t) {
       console.warn("Übersetzung nicht gefunden für Sprache:", sprache);
       return;
@@ -326,6 +347,9 @@ function fuelleDropdown(xml, tagName, selectId) {
     setText("#th-branche", t.thBranche);
     setText("#th-emissionen", t.thEmissionen);
     setText("#th-klasse", t.thKlasse);
+
+    setText("#ueberuns-link-mobile", t.ueberuns);
+    setText("#kontakt-link-mobile", t.kontakt);
   
     // Footer (optional vorhanden)
     if (t.footer) {
@@ -377,9 +401,37 @@ function fuelleDropdown(xml, tagName, selectId) {
     setText("about-design-title", t.about.designTitle);
     setText("about-design-text", t.about.designText);
   }
+
+  function aktualisierePopupTexte(sprache) {
+    const t = gespeicherteTranslations[sprache];
+    if (!t || !t.popup) return;
+  
+    console.log("Popup-Daten:", t.popup);
+  
+    const setText = (id, text) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = text;
+    };
+  
+    setText("popup-heading", t.popup.heading);
+    setText("popup-label", t.popup.label);
+  
+    const nachricht = document.getElementById("nachricht");
+    if (nachricht) nachricht.placeholder = t.popup.placeholder;
+  
+    const popupSubmit = document.getElementById("popup-submit");
+    if (popupSubmit) popupSubmit.innerText = t.popup.submit;
+  
+    const popupSuccess = document.getElementById("popup-success-text");
+    if (popupSuccess) popupSuccess.innerText = t.popup.success;
+  
+    const popupClose = document.getElementById("popup-close");
+    if (popupClose) popupClose.innerText = t.popup.close;
+  }
   
   document.addEventListener("DOMContentLoaded", async () => {
     await ladeUndVerarbeiteTranslations();
+    console.log("Footer-Texte:", gespeicherteTranslations[aktuelleSprache]?.footer);
     const select = document.getElementById("languageSwitcher");
     const gespeicherteSprache = localStorage.getItem("sprache");
 
@@ -395,9 +447,11 @@ function fuelleDropdown(xml, tagName, selectId) {
 
     if (window.location.pathname.includes("ueber-uns.html")) {
       aktualisiereUeberUnsTexte(aktuelleSprache);
+      aktualisierePopupTexte(aktuelleSprache);
     } else {
     await initialisiere();
     }
+    aktualisiereSprache(aktuelleSprache);
 
   const burger = document.querySelector(".burger");
   const mobileMenu = document.getElementById("mobileMenu");
@@ -432,6 +486,7 @@ function fuelleDropdown(xml, tagName, selectId) {
           mobileMenu.classList.remove("active");
           document.body.classList.remove("offcanvas-open");
         }
+        window.location.href = "index.html";
       });
     }
   });
@@ -471,6 +526,7 @@ if (languageSwitcher) {
 
     if (window.location.pathname.includes("ueber-uns.html")) {
       aktualisiereUeberUnsTexte(aktuelleSprache);
+      aktualisierePopupTexte(aktuelleSprache);
     } else {
       // 4. Dropdowns nach Sprache neu füllen
       fuelleDropdown(gespeichertesXML, "name", "company");

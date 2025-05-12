@@ -17,7 +17,7 @@
     </div>
     <div class="header-right">
       <nav class="main-nav">
-        <a id="startseite-link" href="index.html">Startseite</a>
+        <a id="startseite-link-mobile" href="index.html">Startseite</a>
         <a href="ueber-uns.html">Über uns</a>
         <a href="#" id="kontakt-link">Kontakt</a>
       </nav>
@@ -34,7 +34,7 @@
         <nav>
           <a id="startseite-link-mobile" href="index.html">Startseite</a>
           <a href="ueber-uns.html">Über uns</a>
-          <a href="#" id="kontakt-link">Kontakt</a>
+          <a id="kontakt-link-mobile" href="#">Kontakt</a>
         </nav>
       </div>
     </div>
@@ -65,16 +65,15 @@
   </section>
 
   <section class="about-contact">
-    <h2>Fragen oder Feedback?</h2>
+    <h2 id="popup-heading">Fragen oder Feedback?</h2>
     <form id="kontaktformular" class="popup-wrapper">
-      <label for="nachricht">Deine Nachricht:</label>
+      <label for="nachricht" id="popup-label">Deine Nachricht:</label>
       <textarea id="nachricht" name="nachricht" rows="6" placeholder="Schreibe uns hier eine Nachricht mit deinen Kontaktdaten..."></textarea>
-      <button type="submit">Nachricht absenden</button>
+      <button type="submit" id="popup-submit">Nachricht absenden</button>
   
-      <!-- Pop-Up Fenster direkt im Formular -->
       <div id="success-popup" class="popup-hidden popup" role="alert" aria-live="polite">
         <div class="popup-content">
-          <p>Danke für deine Nachricht! Wir melden uns so schnell wie möglich.</p>
+          <p id="popup-success-text">Danke für deine Nachricht! Wir melden uns so schnell wie möglich.</p>
           <button type="button" id="popup-close" aria-label="Fenster schließen">Schließen</button>
         </div>
       </div>
@@ -85,11 +84,11 @@
 <footer>
   <div class="container footer">
     <nav class="footer-nav">
-      <a href="#">Impressum</a>
-      <a href="#">Datenschutz</a>
-      <a href="#" id="kontakt-link">Kontakt</a>
+      <a href="#" id="footer-impressum">Impressum</a>
+      <a href="#" id="footer-datenschutz">Datenschutz</a>
+      <a href="#" id="footer-kontakt">Kontakt</a>
     </nav>
-    <p>Daten sind fiktiv – nur zu Demonstrationszwecken</p>
+    <p id="footer-hinweis">Daten sind fiktiv – nur zu Demonstrationszwecken</p>
   </div>
 </footer>
 <script src="script.js"></script>

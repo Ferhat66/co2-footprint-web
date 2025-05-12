@@ -711,6 +711,14 @@
             <designTitle>Transparenz &amp; Einfachheit</designTitle>
             <designText>Unsere Plattform folgt einem klaren Prinzip: Reduktion auf das Wesentliche. Wir setzen auf ein schlichtes, modernes Design mit hoher Usability. Tabellen, Filteroptionen und klare Visualisierungen unterstützen die Nutzer:innen beim schnellen Erfassen der Informationen. Dabei ist uns wichtig, dass die Plattform für alle zugänglich ist – egal ob Einsteiger:in, Schüler:in, Studierende oder Fachpublikum. Wir möchten informieren, inspirieren und vor allem: zum Nachdenken anregen.</designText>
          </about>
+         <popup>
+            <heading>Fragen oder Feedback?</heading>
+            <label>Deine Nachricht:</label>
+            <placeholder>Schreibe uns hier eine Nachricht mit deinen Kontaktdaten...</placeholder>
+            <submit>Nachricht absenden</submit>
+            <success>Danke für deine Nachricht! Wir melden uns so schnell wie möglich.</success>
+            <close>Schließen</close>
+         </popup>
       </language>
       <language code="en">
          <startseite>Home</startseite>
@@ -755,6 +763,14 @@
             <designTitle>Transparency &amp; Simplicity</designTitle>
             <designText>Our platform follows a clear principle: reduction to the essentials. We rely on a simple, modern design with high usability. Tables, filter options and clear visualizations support users in quickly grasping the information. It is important to us that the platform is accessible to everyone – whether beginners, students, or experts. We aim to inform, inspire and most of all: make people think.</designText>
          </about>
+         <popup>
+            <heading>Questions or feedback?</heading>
+            <label>Your message:</label>
+            <placeholder>Send us a message with your contact details...</placeholder>
+            <submit>Send message</submit>
+            <success>Thank you for your message! We’ll get back to you as soon as possible.</success>
+            <close>Close</close>
+         </popup>
       </language>
       <language code="ar">
          <startseite>الصفحة الرئيسية</startseite>
@@ -799,6 +815,14 @@
             <designTitle>الشفافية والبساطة</designTitle>
             <designText>تتبع منصتنا مبدأً واضحًا: التركيز على الأساسيات. نعتمد على تصميم بسيط وحديث وسهل الاستخدام. تدعم الجداول وخيارات التصفية والتصويرات الواضحة المستخدمين في استيعاب المعلومات بسرعة. من المهم بالنسبة لنا أن تكون المنصة متاحة للجميع – سواء المبتدئين أو الطلاب أو المتخصصين. نهدف إلى الإعلام، والإلهام، وقبل كل شيء: تحفيز التفكير.</designText>
          </about>
+         <popup>
+            <heading>أسئلة أو ملاحظات؟</heading>
+            <label>رسالتك:</label>
+            <placeholder>أرسل لنا رسالة مع بيانات الاتصال الخاصة بك...</placeholder>
+            <submit>إرسال الرسالة</submit>
+            <success>شكرًا لرسالتك! سنتواصل معك في أقرب وقت ممكن.</success>
+            <close>إغلاق</close>
+         </popup>
       </language>
    </translations>
 </root>
