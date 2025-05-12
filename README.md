@@ -43,10 +43,16 @@ Ziel ist die Entwicklung einer responsiven Webseite, welche CO₂-Emissionsdaten
     - Behebung von Fehlern beim initialen Laden der Tabelle
     - Verbesserung der Responsivität und Benutzerfreundlichkeit
 
+##Stand (12.05.2025)
+    Mehrsprachigkeit & Navigation
+
+	•	Bugfix: Startseite ließ sich von „Über uns“ aus nicht aufrufen → Navigation korrigiert
+	•	Übersetzung: Header-, Footer- und Popup-Inhalte werden nun vollständig sprachabhängig     aktualisiert
+	•	Verbesserung der Sprachumschaltung durch persistente Speicherung via localStorage
+
 ##ToDo:
-- Feedback-Popup muss noch in andere Sprachen übersetzt werden
 - `kontakt.html`-Seite ist noch zu erstellen und einzubinden
-- Startseite lädt nicht bei über-uns
+
 
 #Projektstruktur
 
