@@ -50,8 +50,12 @@ Ziel ist die Entwicklung einer responsiven Webseite, welche CO₂-Emissionsdaten
 	•	Übersetzung: Header-, Footer- und Popup-Inhalte werden nun vollständig sprachabhängig     aktualisiert
 	•	Verbesserung der Sprachumschaltung durch persistente Speicherung via localStorage
 
-##ToDo:
-- `kontakt.html`-Seite ist noch zu erstellen und einzubinden
+
+##Stand (13.05.2025)
+    Mehrsprachigkeit & Kontaktseite
+        - Neue Seite `kontakt.html` vollständig erstellt und in bestehendes Design integriert
+        - Dynamische Übersetzung des Main-Contents per XML (inkl. Veranstaltungen, Labels & Textabschnitte)
+        - Bugfix: Übersetzung wurde nach Seitenaufruf nicht sofort übernommen → Initialisierung verbessert
 
 
 #Projektstruktur
