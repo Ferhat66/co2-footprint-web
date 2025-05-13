@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt – CO₂-Footprint</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="container header">
+    <div class="header-left">
+      <img src="logo.png" alt="Logo" class="logo" />
+      <h1 id="logo-title">CO₂-Footprint</h1>
+    </div>
+    <div class="header-right">
+      <nav class="main-nav">
+        <a id="startseite-link" href="index.html">Startseite</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="kontakt.html" id="kontakt-link">Kontakt</a>
+      </nav>
+
+      <select id="languageSwitcher" aria-label="Sprache wählen">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+      </select>
+
+      <button class="burger" aria-label="Menü öffnen">☰</button>
+      <div class="offcanvas-nav" id="mobileMenu">
+        <button class="close-btn" aria-label="Menü schließen">✕</button>
+        <nav>
+          <a id="startseite-link-mobile" href="index.html">Startseite</a>
+          <a id="ueberuns-link-mobile" href="ueber-uns.html">Über uns</a>
+          <a id="kontakt-link-mobile" href="kontakt.html">Kontakt</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hauptinhalt -->
+<main class="scroll-fix">
+    <section class="container kontakt-info">
+      <h2 id="kontakt-title">So erreichen Sie uns</h2>
+      <p id="kontakt-einleitung">Wir stehen Ihnen gerne zur Verfügung – hier finden Sie unsere Kontaktmöglichkeiten:</p>
+  
+      <ul class="kontakt-liste">
+        <li><strong id="kontakt-hotline-label">Hotline:</strong> <span id="kontakt-hotline">0800 / 123 456 789</span></li>
+        <li><strong id="kontakt-email-label">E-Mail:</strong> <span id="kontakt-email">kontakt@co2-footprint.org</span></li>
+        <li><strong id="kontakt-adresse-label">Adresse:</strong> <span id="kontakt-adresse">Grüne Straße 42, 30161 Hannover</span></li>
+      </ul>
+  
+      <p id="kontakt-hinweis">
+        Kommen Sie doch einfach vorbei und informieren Sie sich bei unseren Veranstaltungen:
+      </p>
+  
+      <ul class="kontakt-events">
+        <li id="kontakt-event-0"><strong>16. Mai –</strong> Pavillon Hannover, 18:00 Uhr</li>
+        <li id="kontakt-event-1"><strong>22. Mai –</strong> Stadtbibliothek Linden, 16:30 Uhr</li>
+        <li id="kontakt-event-2"><strong>5. Juni –</strong> Umweltzentrum Hannover, 17:15 Uhr</li>
+        <li id="kontakt-event-3"><strong>12. Juni –</strong> Marktplatz Langenhagen, 14:00 Uhr</li>
+        <li id="kontakt-event-4"><strong>18. Juni –</strong> Fährmannsfest-Gelände, 19:00 Uhr</li>
+      </ul>
+  
+      <p id="kontakt-formular-hinweis">
+        Oder <a href="ueber-uns.html">schreiben Sie uns doch eine Nachricht mit Ihren Kontaktinformationen</a> – wir melden uns bei Ihnen.
+      </p>
+    </section>
+  </main>
+
+<!-- Footer -->
+<footer>
+  <div class="container footer">
+    <nav class="footer-nav">
+      <a href="#" id="footer-impressum">Impressum</a>
+      <a href="#" id="footer-datenschutz">Datenschutz</a>
+      <a href="#" id="footer-kontakt">Kontakt</a>
+    </nav>
+    <p id="footer-hinweis">Daten sind fiktiv – nur zu Demonstrationszwecken</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -719,6 +719,25 @@
             <success>Danke für deine Nachricht! Wir melden uns so schnell wie möglich.</success>
             <close>Schließen</close>
          </popup>
+         <contact>
+            <title>So erreichen Sie uns</title>
+            <intro>Wir stehen Ihnen gerne zur Verfügung – hier finden Sie unsere Kontaktmöglichkeiten:</intro>
+            <hotlineLabel>Hotline:</hotlineLabel>
+            <emailLabel>E-Mail:</emailLabel>
+            <addressLabel>Adresse:</addressLabel>
+            <hint>Kommen Sie doch einfach vorbei und informieren Sie sich bei unseren Veranstaltungen:</hint>
+            <formHint>
+               Oder <a href="ueber-uns.html">schreiben Sie uns doch eine Nachricht mit Ihren Kontaktinformationen</a>
+               – wir melden uns bei Ihnen.
+            </formHint>
+            <events>
+               <event>16. Mai – Pavillon Hannover, 18:00 Uhr</event>
+               <event>22. Mai – Stadtbibliothek Linden, 16:30 Uhr</event>
+               <event>5. Juni – Umweltzentrum Hannover, 17:15 Uhr</event>
+               <event>12. Juni – Marktplatz Langenhagen, 14:00 Uhr</event>
+               <event>18. Juni – Fährmannsfest-Gelände, 19:00 Uhr</event>
+            </events>
+         </contact>
       </language>
       <language code="en">
          <startseite>Home</startseite>
@@ -771,6 +790,26 @@
             <success>Thank you for your message! We’ll get back to you as soon as possible.</success>
             <close>Close</close>
          </popup>
+         <contact>
+            <title>How to reach us</title>
+            <intro>We are happy to assist you – here are our contact options:</intro>
+            <hotlineLabel>Hotline:</hotlineLabel>
+            <emailLabel>Email:</emailLabel>
+            <addressLabel>Address:</addressLabel>
+            <hint>Just stop by and learn more at one of our events:</hint>
+            <formHint>
+               Or
+               <a href="ueber-uns.html">send us a message with your contact details</a>
+               – and we’ll get back to you.
+            </formHint>
+            <events>
+               <event>16 May – Pavillon Hannover, 6:00 PM</event>
+               <event>22 May – Linden City Library, 4:30 PM</event>
+               <event>5 June – Environmental Center Hannover, 5:15 PM</event>
+               <event>12 June – Langenhagen Market Square, 2:00 PM</event>
+               <event>18 June – Fährmannsfest Grounds, 7:00 PM</event>
+            </events>
+         </contact>
       </language>
       <language code="ar">
          <startseite>الصفحة الرئيسية</startseite>
@@ -823,6 +862,26 @@
             <success>شكرًا لرسالتك! سنتواصل معك في أقرب وقت ممكن.</success>
             <close>إغلاق</close>
          </popup>
+         <contact>
+            <title>كيف تتواصل معنا</title>
+            <intro>يسعدنا مساعدتك – إليك طرق التواصل معنا:</intro>
+            <hotlineLabel>الخط الساخن:</hotlineLabel>
+            <emailLabel>البريد الإلكتروني:</emailLabel>
+            <addressLabel>العنوان:</addressLabel>
+            <hint>تفضل بزيارتنا وتعرف على المزيد من خلال فعالياتنا:</hint>
+            <formHint>
+               أو
+               <a href="ueber-uns.html">أرسل لنا رسالة مع معلومات الاتصال الخاصة بك</a>
+               – وسنعاود الاتصال بك.
+            </formHint>
+            <events>
+               <event>١٦ مايو – Pavillon Hannover، الساعة ٦:٠٠ مساءً</event>
+               <event>٢٢ مايو – Stadtbibliothek Linden، الساعة ٤:٣٠ مساءً</event>
+               <event>٥ يونيو – Umweltzentrum Hannover، الساعة ٥:١٥ مساءً</event>
+               <event>١٢ يونيو – Marktplatz Langenhagen، الساعة ٢:٠٠ مساءً</event>
+               <event>١٨ يونيو – Fährmannsfest-Gelände، الساعة ٧:٠٠ مساءً</event>
+            </events>
+         </contact>
       </language>
    </translations>
 </root>

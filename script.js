@@ -54,6 +54,21 @@ async function ladeUndVerarbeiteTranslations() {
         Array.from(item.children).forEach(subitem => {
           gespeicherteTranslations[code].popup[subitem.tagName] = subitem.textContent;
         });
+      } else if (item.tagName === "contact") {
+        gespeicherteTranslations[code].contact = {};
+        Array.from(item.children).forEach(subitem => {
+          if (subitem.tagName === "events") {
+            gespeicherteTranslations[code].contact.events = {
+              event: Array.from(subitem.getElementsByTagName("event")).map(e => e.textContent)
+            };
+          } else {
+            if (subitem.tagName === "formHint") {
+              gespeicherteTranslations[code].contact.formHint = subitem.innerHTML;
+            } else {
+              gespeicherteTranslations[code].contact[subitem.tagName] = subitem.textContent;
+            }
+          }
+        });
       } else {
         gespeicherteTranslations[code][item.tagName] = item.textContent;
       }
@@ -99,8 +114,9 @@ function zeigeTabelle(xml) {
 }
 function aktualisiereSortDropdown(sprache) {
   const sortSelect = document.getElementById("sort");
-  if (!sortSelect) return;
-
+  if (!sortSelect){
+    return;
+  }
   const t = gespeicherteTranslations[sprache];
   if (!t || !t.sortOptions) return;
 
@@ -130,6 +146,7 @@ function fuelleDropdown(xml, tagName, selectId) {
   });
 
   const select = document.getElementById(selectId);
+  if (!select) return;
   const vorherigerWert = select.value;
 
   const alleTexte = { de: "Alle", en: "All", ar: "الكل" };
@@ -304,17 +321,48 @@ function fuelleDropdown(xml, tagName, selectId) {
     }
   }
 
+  function aktualisiereKontaktTexte(sprache) {
+    const t = gespeicherteTranslations[sprache];
+    if (!t || !t.contact) {
+      console.warn("Keine Übersetzungen für 'Kontakt' gefunden");
+      return;
+    }
+  
+    const c = t.contact;
+    const setText = (id, text) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = text;
+    };
+  
+    setText("kontakt-title", c.title);
+    setText("kontakt-einleitung", c.intro);
+    setText("kontakt-hotline-label", c.hotlineLabel);
+    setText("kontakt-email-label", c.emailLabel);
+    setText("kontakt-adresse-label", c.addressLabel);
+    setText("kontakt-hinweis", c.hint);
+  
+    const formHinweis = document.getElementById("kontakt-formular-hinweis");
+    if (formHinweis) formHinweis.innerHTML = c.formHint?.trim() || "";
+  
+    const eventList = document.querySelector(".kontakt-events");
+    if (eventList && c.events?.event) {
+      eventList.innerHTML = "";
+      const events = Array.isArray(c.events.event) ? c.events.event : [c.events.event];
+      events.forEach(e => {
+        const li = document.createElement("li");
+        li.textContent = e;
+        eventList.appendChild(li);
+      });
+    }
+  }
+
   function aktualisiereSprache(sprache) {
     const t = gespeicherteTranslations[sprache];
-    if (!window.location.pathname.includes("ueber-uns.html")) {
-      aktualisiereSortDropdown(sprache);
-    }
     if (!t) {
       console.warn("Übersetzung nicht gefunden für Sprache:", sprache);
       return;
     }
   
-    // Prüffunktion, die prüft ob Element da ist
     const setText = (selector, text) => {
       const el = document.querySelector(selector);
       if (el) el.textContent = text;
@@ -325,38 +373,51 @@ function fuelleDropdown(xml, tagName, selectId) {
     setText("#startseite-link-mobile", t.startseite);
     setText('a[href="ueber-uns.html"]', t.ueberuns);
     setText("#kontakt-link", t.kontakt);
-  
-    // Intro-Bereich (nur Startseite)
-    setText("#intro h2", t.introTitle);
-    setText("#intro p", t.introText);
-  
-    // Tabelle + Filter
-    setText(".table-controls span", t.entriesUnit);
-    setText('label[for="company"]', t.companyLabel);
-    setText('label[for="country"]', t.countryLabel);
-    setText('label[for="industry"]', t.industryLabel);
-    setText('label[for="sort"]', t.sortLabel);
-    setText('label[for="search"]', t.searchLabel);
-    setText('label[for="entriesPerPage"]', t.entriesLabel);
-  
-    setText("#prevPage", t.prevButton);
-    setText("#nextPage", t.nextButton);
-  
-    setText("#th-name", t.thName);
-    setText("#th-land", t.thLand);
-    setText("#th-branche", t.thBranche);
-    setText("#th-emissionen", t.thEmissionen);
-    setText("#th-klasse", t.thKlasse);
-
     setText("#ueberuns-link-mobile", t.ueberuns);
     setText("#kontakt-link-mobile", t.kontakt);
   
-    // Footer (optional vorhanden)
+    // Footer
     if (t.footer) {
       setText("#footer-impressum", t.footer.impressum);
       setText("#footer-datenschutz", t.footer.datenschutz);
       setText("#footer-kontakt", t.footer.kontakt);
       setText("#footer-hinweis", t.footer.hinweis);
+    }
+  
+    // Startseite
+    if (document.getElementById("intro")) {
+      setText("#intro h2", t.introTitle);
+      setText("#intro p", t.introText);
+    }
+  
+    // Tabelle/Filter
+    if (document.getElementById("sort")) {
+      aktualisiereSortDropdown(sprache);
+      setText(".table-controls span", t.entriesUnit);
+      setText('label[for="company"]', t.companyLabel);
+      setText('label[for="country"]', t.countryLabel);
+      setText('label[for="industry"]', t.industryLabel);
+      setText('label[for="sort"]', t.sortLabel);
+      setText('label[for="search"]', t.searchLabel);
+      setText('label[for="entriesPerPage"]', t.entriesLabel);
+      setText("#prevPage", t.prevButton);
+      setText("#nextPage", t.nextButton);
+      setText("#th-name", t.thName);
+      setText("#th-land", t.thLand);
+      setText("#th-branche", t.thBranche);
+      setText("#th-emissionen", t.thEmissionen);
+      setText("#th-klasse", t.thKlasse);
+    }
+  
+    // Kontaktseite
+    if (document.getElementById("kontakt-title")) {
+      aktualisiereKontaktTexte(sprache);
+    }
+  
+    // Über-uns-Seite
+    if (document.getElementById("about-mission-title")) {
+      aktualisiereUeberUnsTexte(sprache);
+      aktualisierePopupTexte(sprache);
     }
   }
 
@@ -434,7 +495,7 @@ function fuelleDropdown(xml, tagName, selectId) {
     console.log("Footer-Texte:", gespeicherteTranslations[aktuelleSprache]?.footer);
     const select = document.getElementById("languageSwitcher");
     const gespeicherteSprache = localStorage.getItem("sprache");
-
+  
     if (gespeicherteSprache) {
       aktuelleSprache = gespeicherteSprache;
       if (select) select.value = gespeicherteSprache;
@@ -442,113 +503,128 @@ function fuelleDropdown(xml, tagName, selectId) {
       aktuelleSprache = select?.value || "de";
       localStorage.setItem("sprache", aktuelleSprache);
     }
+  
     document.documentElement.setAttribute("lang", aktuelleSprache);
     document.documentElement.setAttribute("dir", aktuelleSprache === "ar" ? "rtl" : "ltr");
-
-    if (window.location.pathname.includes("ueber-uns.html")) {
+  
+    if (document.getElementById("about-mission-title")) {
       aktualisiereUeberUnsTexte(aktuelleSprache);
       aktualisierePopupTexte(aktuelleSprache);
-    } else {
-    await initialisiere();
+    } else if (document.getElementById("sort")) {
+      await initialisiere();
+    } else if (document.getElementById("kontakt-title")) {
+      aktualisiereKontaktTexte(aktuelleSprache);
     }
     aktualisiereSprache(aktuelleSprache);
-
-  const burger = document.querySelector(".burger");
-  const mobileMenu = document.getElementById("mobileMenu");
-  const closeBtn = mobileMenu.querySelector(".close-btn");
-
-  // Burger-Menü öffnen
-  burger.addEventListener("click", () => {
-    mobileMenu.classList.add("active");
-    document.body.classList.add("offcanvas-open");
-  });
-
-  // Burger-Menü schließen
-  closeBtn.addEventListener("click", () => {
-    mobileMenu.classList.remove("active");
-    document.body.classList.remove("offcanvas-open");
-  });
-
-  // "Startseite"-Reset
-  const resetTrigger = [
-    document.getElementById("startseite-link"),
-    document.getElementById("startseite-link-mobile"),
-    document.getElementById("logo-title")
-  ];
-
-  resetTrigger.forEach((el) => {
-    if (el) {
-      el.addEventListener("click", (e) => {
+  
+    // Burger-Menü öffnen
+    const burger = document.querySelector(".burger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const closeBtn = mobileMenu?.querySelector(".close-btn");
+  
+    if (burger && mobileMenu && closeBtn) {
+      burger.addEventListener("click", () => {
+        mobileMenu.classList.add("active");
+        document.body.classList.add("offcanvas-open");
+      });
+  
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+        document.body.classList.remove("offcanvas-open");
+      });
+    }
+    if (window.location.pathname.includes("kontakt.html")) {
+      aktualisiereKontaktTexte(aktuelleSprache);
+    }
+  
+    // "Startseite"-Reset
+    const resetTrigger = [
+      document.getElementById("startseite-link"),
+      document.getElementById("startseite-link-mobile"),
+      document.getElementById("logo-title")
+    ];
+  
+    resetTrigger.forEach((el) => {
+      if (el) {
+        el.addEventListener("click", (e) => {
+          e.preventDefault();
+          resetFilters();
+  
+          if (mobileMenu.classList.contains("active")) {
+            mobileMenu.classList.remove("active");
+            document.body.classList.remove("offcanvas-open");
+          }
+          window.location.href = "index.html";
+        });
+      }
+    });
+  
+    // Pop-up nach dem Absenden des Kontaktformulars
+    const kontaktFormular = document.getElementById("kontaktformular");
+    const popup = document.getElementById("success-popup");
+  
+    if (kontaktFormular && popup) {
+      kontaktFormular.addEventListener("submit", (e) => {
         e.preventDefault();
-        resetFilters();
-
-        if (mobileMenu.classList.contains("active")) {
-          mobileMenu.classList.remove("active");
-          document.body.classList.remove("offcanvas-open");
+        popup.classList.remove("popup-hidden");
+  
+        const popupClose = document.getElementById("popup-close");
+        if (popupClose) {
+          popupClose.onclick = () => {
+            popup.classList.add("popup-hidden");
+            kontaktFormular.reset();
+          };
         }
-        window.location.href = "index.html";
+      });
+    }
+  
+    // Sprachumschalter
+    const languageSwitcher = document.getElementById("languageSwitcher");
+    if (languageSwitcher) {
+      languageSwitcher.addEventListener("change", (e) => {
+        // 1. Sprache setzen (ganz oben)
+        aktuelleSprache = e.target.value;
+        localStorage.setItem("sprache", aktuelleSprache);
+  
+        // 2. HTML-Attribute anpassen
+        document.documentElement.setAttribute("lang", aktuelleSprache);
+        document.documentElement.setAttribute("dir", aktuelleSprache === "ar" ? "rtl" : "ltr");
+  
+        // 3. Alle Texte aktualisieren
+        aktualisiereSprache(aktuelleSprache);
+  
+        if (window.location.pathname.includes("ueber-uns.html")) {
+          aktualisiereUeberUnsTexte(aktuelleSprache);
+          aktualisierePopupTexte(aktuelleSprache);
+        } else {
+          // 4. Dropdowns nach Sprache neu füllen
+          fuelleDropdown(gespeichertesXML, "name", "company");
+          fuelleDropdown(gespeichertesXML, "land", "country");
+          fuelleDropdown(gespeichertesXML, "branche", "industry");
+  
+          // 5. Sort-Dropdown aktualisieren
+          aktualisiereSortDropdown(aktuelleSprache);
+  
+          // 6. Tabelle neu laden oder filtern
+          aktuelleSeite = 1;
+          const company = document.getElementById("company");
+          const country = document.getElementById("country");
+          const industry = document.getElementById("industry");
+          const search = document.getElementById("search");
+  
+          if (company && country && industry && search) {
+            const companyValue = company.value;
+            const countryValue = country.value;
+            const industryValue = industry.value;
+            const searchValue = search.value;
+  
+            if (companyValue || countryValue || industryValue || searchValue) {
+              filtereTabelle(gespeichertesXML);
+            } else {
+              zeigeTabelle(gespeichertesXML);
+            }
+          }
+        }
       });
     }
   });
-
-  // Pop-up nach dem Absenden des Kontaktformulars
-  const kontaktFormular = document.getElementById("kontaktformular");
-  const popup = document.getElementById("success-popup");
-
-  if (kontaktFormular && popup) {
-    kontaktFormular.addEventListener("submit", (e) => {
-      e.preventDefault();
-      popup.classList.remove("popup-hidden");
-
-      const popupClose = document.getElementById("popup-close");
-      if (popupClose) {
-        popupClose.onclick = () => {
-          popup.classList.add("popup-hidden");
-          kontaktFormular.reset();
-        };
-      }
-    });
-  }
-
-  // Sprachumschalter
-const languageSwitcher = document.getElementById("languageSwitcher");
-if (languageSwitcher) {
-  languageSwitcher.addEventListener("change", (e) => {
-    // 1. Sprache setzen (ganz oben)
-    aktuelleSprache = e.target.value;
-    localStorage.setItem("sprache", aktuelleSprache);
-    // 2. HTML-Attribute anpassen
-    document.documentElement.setAttribute("lang", aktuelleSprache);
-    document.documentElement.setAttribute("dir", aktuelleSprache === "ar" ? "rtl" : "ltr");
-
-    // 3. Alle Texte aktualisieren
-    aktualisiereSprache(aktuelleSprache);
-
-    if (window.location.pathname.includes("ueber-uns.html")) {
-      aktualisiereUeberUnsTexte(aktuelleSprache);
-      aktualisierePopupTexte(aktuelleSprache);
-    } else {
-      // 4. Dropdowns nach Sprache neu füllen
-      fuelleDropdown(gespeichertesXML, "name", "company");
-      fuelleDropdown(gespeichertesXML, "land", "country");
-      fuelleDropdown(gespeichertesXML, "branche", "industry");
-      
-      // 5. Sort-Dropdown aktualisieren
-      aktualisiereSortDropdown(aktuelleSprache);
-
-      // 6. Tabelle neu laden oder filtern
-      aktuelleSeite = 1;
-      const company = document.getElementById("company").value;
-      const country = document.getElementById("country").value;
-      const industry = document.getElementById("industry").value;
-      const search = document.getElementById("search").value;
-
-      if (company || country || industry || search) {
-        filtereTabelle(gespeichertesXML);
-      } else {
-        zeigeTabelle(gespeichertesXML);
-      }
-    }
-  });
-}
-});

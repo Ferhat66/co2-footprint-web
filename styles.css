@@ -568,3 +568,14 @@ html[dir="rtl"] .filter-grid {
 html[dir="rtl"] footer nav {
   justify-content: center;
 }
+
+#kontakt-formular-hinweis a {
+  color: #0077cc;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#kontakt-formular-hinweis a:hover {
+  color: #005fa3;
+}
